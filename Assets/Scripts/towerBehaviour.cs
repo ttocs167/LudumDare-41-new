@@ -17,12 +17,19 @@ public class towerBehaviour : MonoBehaviour
     private GameObject[] targets;
     private GameObject target;
     private float nextFire = 0f;
-
+    private float radius = 1f;
     // Use this for initialization
     void Start()
     {
-        rend = GetComponent<Renderer>();        
+        rend = GetComponent<Renderer>();
+        radius = rend.bounds.extents.magnitude/2;
+        changeScale();
+    }
 
+    public void changeScale()
+    {
+        float scale = range / radius;
+        rend.material.SetFloat("_Scale", scale);
     }
     public void changeShaderState(float onAlpha,float offAlpha)
     {
