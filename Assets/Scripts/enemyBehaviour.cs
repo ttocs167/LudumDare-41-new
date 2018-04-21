@@ -24,6 +24,11 @@ public class enemyBehaviour : MonoBehaviour {
         Vector2 heading = (target.transform.position - this.transform.position);
         float distance = heading.magnitude;
         Vector2 moveDirection = heading / distance;
+
+        float angle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg +270;
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
+
         if (distance > attackRange)
         {
             if (rb.velocity.magnitude < maxSpeed)
