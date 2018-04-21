@@ -57,7 +57,7 @@ public class phaseManager : MonoBehaviour {
                 }
             }
         }
-        if (enemies.Length == 0 && !buildPhase && !fightPhase)
+        if (enemies.Length == 0 && buildPhase == false && fightPhase == false)
         {
             buildPhase = !buildPhase;
             buildTime = maxBuildTime;
