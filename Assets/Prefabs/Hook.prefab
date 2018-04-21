@@ -65,7 +65,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1137643184775598}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 580ea16d793e4724289bfff1e93dcc43, type: 3}
+  m_Script: {fileID: 11500000, guid: 1c5de973947ae774688b74bbc2f3429e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   FishSpawner: {fileID: 0}
