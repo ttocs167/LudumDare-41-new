@@ -25,7 +25,7 @@ public class phaseManager : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
         timer.text = ("" + maxBuildTime);
