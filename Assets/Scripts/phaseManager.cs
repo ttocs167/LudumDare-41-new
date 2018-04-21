@@ -5,11 +5,13 @@ using System.Threading;
 using UnityEngine.UI;
 
 public class phaseManager : MonoBehaviour {
-    private bool buildPhase;
-    private bool fightPhase;
+    //string FIGHT/BUILD/NONE
+    private string currentState;
+
     private int enemyCount = 1;
     private float buildTime;
-    private GameObject[] enemies;
+    private GameObject[] enemiesArray;
+    //List<GameObject> enemiesList = new List<GameObject>();
 
     public float width = 1f;
     public float height = 1f;
@@ -21,8 +23,7 @@ public class phaseManager : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        buildPhase = true;
-        fightPhase = false;
+        currentState = "BUILD";
         buildTime = maxBuildTime;
         timer.text = ("" + maxBuildTime);
 
@@ -31,39 +32,57 @@ public class phaseManager : MonoBehaviour {
     // Update is called once per frame
     void FixedUpdate()
     {
-        enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        Debug.Log("Current State = " + currentState);
+        enemiesArray = GameObject.FindGameObjectsWithTag("Enemy");
 
-        if (buildPhase)
+        switch (currentState)
         {
-            buildTime -= Time.deltaTime;
-            timer.text = ("" + buildTime);
-            // do build mode things
+            case "BUILD":
+                buildState();
+                break;
+            case "SPAWN":
+                spawnState();
+                break;
+            case "FIGHT":
+                fightState();
+                break;
+        }
+    }
 
-            if (buildTime < 0)
+    void buildState()
+    {
+        buildTime -= Time.deltaTime;
+        timer.text = ("" + buildTime);
+        // do build mode things
+
+        if (buildTime < 0)
+        {
+            currentState = "SPAWN";
+        }
+    }
+
+    void spawnState()
+    {
+        currentState = "FIGHT";
+
+        if (enemiesArray.Length == 0)
+        {
+            for (int i = 0; i < enemyCount; i++)
             {
-                
-                buildPhase = !buildPhase;
-                fightPhase = !fightPhase;
+                Invoke("SpawnEnemies", 0f);
             }
         }
-        if (fightPhase)
+    }
+
+    void fightState()
+    {
+        Debug.Log("enemiesList count = " + enemiesArray.Length);
+        if (enemiesArray.Length == 0)
         {
-            fightPhase = !fightPhase;
-            if (enemies.Length == 0)
-            {
-                for (int i = 0; i < enemyCount; i++)
-                {
-                    Invoke("SpawnEnemies", 0f);
-                }
-            }
-        }
-        if (enemies.Length == 0 && buildPhase == false && fightPhase == false)
-        {
-            buildPhase = !buildPhase;
+            currentState = "BUILD";
             buildTime = maxBuildTime;
             enemyCount += 1;
         }
-        
     }
 
     void SpawnEnemies()
@@ -72,7 +91,5 @@ public class phaseManager : MonoBehaviour {
         float yPos = Random.Range(spawnArea.transform.position.y - height, spawnArea.transform.position.y + height);
         Vector2 spawnLocation = new Vector2(xPos, yPos);
         GameObject enemy = (GameObject)Instantiate(enemyType, spawnLocation, transform.rotation);
-
-
     }
 }
