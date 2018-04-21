@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4763190360576770}
   - component: {fileID: 212643156166511844}
   - component: {fileID: 58780258102007532}
-  - component: {fileID: 114052707964113876}
+  - component: {fileID: 114612711191096284}
   m_Layer: 0
   m_Name: Hook
   m_TagString: Untagged
@@ -35,8 +35,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1137643184775598}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.96, y: 0.02, z: 0.09375}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.7300873, y: -0.04782022, z: 9.957031}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -57,7 +57,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
---- !u!114 &114052707964113876
+--- !u!114 &114612711191096284
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1137643184775598}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c5de973947ae774688b74bbc2f3429e, type: 3}
+  m_Script: {fileID: 11500000, guid: 049bb8eb63165e640b396d2818981e8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   FishSpawner: {fileID: 0}

@@ -20,7 +20,8 @@ public class FishSpawner : MonoBehaviour {
 
 		Vector2 spawnPoint = new Vector2 (Random.Range(leftEdge, rightEdge), transform.position.y);
 
-		Instantiate (Fish_Prefab, spawnPoint, Quaternion.identity);
+		GameObject Fish = Instantiate (Fish_Prefab, spawnPoint, Quaternion.identity);
+		Fish.transform.parent = gameObject.transform;
 		
 	}
 
