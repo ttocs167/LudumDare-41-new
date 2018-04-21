@@ -5,8 +5,8 @@ using System.Threading;
 using UnityEngine.UI;
 
 public class phaseManager : MonoBehaviour {
-    private bool buildPhase = true;
-    private bool fightPhase = false;
+    private bool buildPhase;
+    private bool fightPhase;
     private int enemyCount = 1;
     private float buildTime;
     private GameObject[] enemies;
@@ -21,6 +21,10 @@ public class phaseManager : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+        buildPhase = true;
+        fightPhase = false;
+        buildTime = maxBuildTime;
+        timer.text = ("" + maxBuildTime);
 
     }
 
@@ -28,34 +32,38 @@ public class phaseManager : MonoBehaviour {
     void FixedUpdate()
     {
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        timer.text = ("" + maxBuildTime);
 
-        if (fightPhase && enemies.Length == 0)
-        {
-            Debug.Log("fight phase");
-            for (int i = 0; i < enemyCount; i++) {
-                Invoke("SpawnEnemies", 0f);
-            }
-
-            if (enemies.Length == 0)
-            {
-                buildPhase = !buildPhase;
-                fightPhase = !fightPhase;
-            }
-        }
         if (buildPhase)
         {
-            Debug.Log("build phase");
             buildTime -= Time.deltaTime;
-            timer.text = "Time Left:" + Mathf.Round(buildTime);
+            timer.text = ("" + buildTime);
+            // do build mode things
+
             if (buildTime < 0)
             {
-                timer.text = "FIGHT!";
+                
                 buildPhase = !buildPhase;
                 fightPhase = !fightPhase;
-                enemyCount += 1;
             }
         }
+        if (fightPhase)
+        {
+            fightPhase = !fightPhase;
+            if (enemies.Length == 0)
+            {
+                for (int i = 0; i < enemyCount; i++)
+                {
+                    Invoke("SpawnEnemies", 0f);
+                }
+            }
+        }
+        if (enemies.Length == 0 && !buildPhase && !fightPhase)
+        {
+            buildPhase = !buildPhase;
+            buildTime = maxBuildTime;
+            enemyCount += 1;
+        }
+        
     }
 
     void SpawnEnemies()
