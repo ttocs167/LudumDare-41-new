@@ -90,6 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -100
+  Coin: {fileID: 1163340531528096, guid: 327081065c01b044eb6a65c8abe69da1, type: 2}
 --- !u!212 &212880897288968660
 SpriteRenderer:
   m_ObjectHideFlags: 1
