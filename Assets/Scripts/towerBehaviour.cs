@@ -31,10 +31,9 @@ public class towerBehaviour : MonoBehaviour
         float scale = range / radius;
         rend.material.SetFloat("_Scale", scale);
     }
-    public void changeShaderState(float onAlpha,float offAlpha)
-    {
-        isShaderOn = !isShaderOn;
-        if (isShaderOn)
+    public void changeShaderState(bool setState,float onAlpha,float offAlpha)
+    {        
+        if (setState)
         {
             rend.material.SetFloat("_Alpha", onAlpha);
             rend.material.SetColor("_OutlineColour", Color.red);
@@ -47,10 +46,7 @@ public class towerBehaviour : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetButtonDown("Fire2"))
-        {
-            changeShaderState(0, 0.3f);
-        }
+        changeShaderState(Camera.main.GetComponent<cameraControl>().mapOn, Camera.main.GetComponent<cameraControl>().onAlpha, Camera.main.GetComponent<cameraControl>().offAlpha);
     }
     // Update is called once per frame
     void FixedUpdate()
