@@ -3,16 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class tempTowerBehaviourScript : MonoBehaviour {
-
-    private GameObject self;
+    
     public float gridSize = 1;
     public GameObject towerType;
     public float spawnTime;
     public GameObject player;
+    public List<int> locationListx;
+    public List<int> locationListy;
+    private GameObject self;
     private float distance;
     private float distancex;
     private float distancey;
     private float theta;
+    private int posx;
+    private int posy;
+    private bool overlap;
 
 
 	// Use this for initialization
@@ -20,6 +25,11 @@ public class tempTowerBehaviourScript : MonoBehaviour {
         self = this.gameObject;
         spawnTime = Time.time;
         player = GameObject.FindGameObjectWithTag("Player");
+        locationListx.Add(1);
+        locationListx.Add(1);
+        locationListy.Add(1);
+        locationListy.Add(-1);
+
 
     }
 	
@@ -37,7 +47,7 @@ public class tempTowerBehaviourScript : MonoBehaviour {
         {
             theta += Mathf.PI;
         }
-        Debug.Log(theta.ToString());
+
 
         if (distance > gridSize * 2)
         {
@@ -49,13 +59,27 @@ public class tempTowerBehaviourScript : MonoBehaviour {
         cursorPos.z = playerPos.z;
         transform.position = cursorPos;
 
-        if (Input.GetMouseButtonDown(0) & Time.time > spawnTime + 0.2f)
+        posx = (int)cursorPos.x;
+        posy = (int)cursorPos.y;
+
+        for (int i = 0; i < locationListy.Count; i++)
+        {
+            if (posx == locationListx[i] & posy == locationListy[i])
+            {
+                overlap = true;
+            }
+        }
+
+        if (Input.GetMouseButtonDown(0) & Time.time > spawnTime + 0.2f & !overlap)
         {
             GameObject tower = (GameObject)Instantiate(towerType, transform.position, transform.rotation);
+            locationListx.Add(posx);
+            locationListy.Add(posy);
             Debug.Log("mouse clicked: meant to place tower");
-            Debug.Log((Time.time - spawnTime).ToString());
             spawnTime = Time.time;
+            overlap = false;
             Destroy(self);
+            
             
         }
 
