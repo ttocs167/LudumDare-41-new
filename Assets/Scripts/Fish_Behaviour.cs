@@ -13,7 +13,6 @@ public class Fish_Behaviour : MonoBehaviour {
 		// Get the rigidbody component
 		r2d = GetComponent<Rigidbody2D>();
 
-
 	}
 
 	void Update(){
