@@ -55,7 +55,7 @@ MonoBehaviour:
   gridSize: 1
   towerType: {fileID: 1270720049919282, guid: aecbf94ced3e5cf459cbe77b89690a8e, type: 2}
   spawnTime: 0
-  player: {fileID: 1439984047272228, guid: d3ef7c004f98f2d419eb1decc1982070, type: 2}
+  player: {fileID: 0}
 --- !u!212 &212239159265516918
 SpriteRenderer:
   m_ObjectHideFlags: 1
