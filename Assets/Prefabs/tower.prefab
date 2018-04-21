@@ -52,6 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d30ca7964d6e44d418fdd5f761c240c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   range: 6
   damage: 1
   rateOfFire: 1
@@ -72,7 +73,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 66c4ff0b01783e940982595037142329, type: 2}
+  - {fileID: 2100000, guid: 04d2442e2e703284388431ae8819b4c4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
