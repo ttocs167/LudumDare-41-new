@@ -139,9 +139,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 10
   moveSpeed: 100
-  damage: 0
+  damage: 1
   attackRange: 0.5
   health: 2
+  attackRate: 1
+  chanceToTargetPlayer: 0.5
 --- !u!212 &212525277715328444
 SpriteRenderer:
   m_ObjectHideFlags: 1
