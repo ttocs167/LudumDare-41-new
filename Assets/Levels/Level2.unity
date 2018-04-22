@@ -252,18 +252,6 @@ Prefab:
       propertyPath: timer
       value: 
       objectReference: {fileID: 227150011}
-    - target: {fileID: 114803538710536886, guid: da0a5e8c7c827ef4d94f5e3d9b260c30,
-        type: 2}
-      propertyPath: enemyType
-      value: 
-      objectReference: {fileID: 1039440989038814, guid: 43de4916b7b86594db9f9164373ab434,
-        type: 2}
-    - target: {fileID: 114682229867979932, guid: da0a5e8c7c827ef4d94f5e3d9b260c30,
-        type: 2}
-      propertyPath: enemyType
-      value: 
-      objectReference: {fileID: 1039440989038814, guid: 43de4916b7b86594db9f9164373ab434,
-        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: da0a5e8c7c827ef4d94f5e3d9b260c30, type: 2}
   m_IsPrefabParent: 0
