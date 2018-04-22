@@ -32,7 +32,6 @@ public class phaseManager : MonoBehaviour {
     // Update is called once per frame
     void FixedUpdate()
     {
-        Debug.Log("Current State = " + currentState);
         enemiesArray = GameObject.FindGameObjectsWithTag("Enemy");
 
         switch (currentState)
@@ -76,7 +75,6 @@ public class phaseManager : MonoBehaviour {
 
     void fightState()
     {
-        Debug.Log("enemiesList count = " + enemiesArray.Length);
         if (enemiesArray.Length == 0)
         {
             currentState = "BUILD";
