@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212243972995597352}
   - component: {fileID: 114345069983039332}
   m_Layer: 0
-  m_Name: TempTower
+  m_Name: TempTower 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,7 +35,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1107854542156344}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.780228, y: 0.1661761, z: -0.11067458}
+  m_LocalPosition: {x: 2.780228, y: 0.1661761, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
