@@ -34,8 +34,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1944851100544700}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.5900874, y: 5.21218, z: 9.863281}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.46, y: 5.24, z: 0}
   m_LocalScale: {x: 150, y: 11.528359, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -55,6 +55,8 @@ MonoBehaviour:
   Fish_Prefab: {fileID: 1717312324799588, guid: c133015bd7cd9cc46b49ed38c18331c1,
     type: 2}
   spawnTime: 2
+  startWait: 0
+  fishCount: 0
 --- !u!212 &212190420509740646
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -89,7 +91,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d0954c9d48ad50843bcbda3c4e2b858f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f1cbde100acd9fd429c7626b8578da14, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,5 +99,5 @@ SpriteRenderer:
   m_Size: {x: 0.04, y: 0.04}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0

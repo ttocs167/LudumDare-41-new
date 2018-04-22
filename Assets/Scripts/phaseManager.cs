@@ -20,19 +20,25 @@ public class phaseManager : MonoBehaviour {
     public float maxBuildTime;
     public Text timer;
 
+	public bool FishSpawning;
+
+	private GameObject FishSpawner;
+
+
     // Use this for initialization
     void Start()
     {
         currentState = "BUILD";
         buildTime = maxBuildTime;
         timer.text = ("" + maxBuildTime);
+		FishSpawner = GameObject.Find("FishSpawner");
 
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        Debug.Log("Current State = " + currentState);
+        //Debug.Log("Current State = " + currentState);
         enemiesArray = GameObject.FindGameObjectsWithTag("Enemy");
 
         switch (currentState)
@@ -51,7 +57,9 @@ public class phaseManager : MonoBehaviour {
 
     void buildState()
     {
-        buildTime -= Time.deltaTime;
+		FishSpawner.GetComponent<FishSpawner> ().Stop();
+		FishSpawning = false;
+		buildTime -= Time.deltaTime;
         timer.text = ("" + buildTime);
         // do build mode things
 
@@ -76,7 +84,8 @@ public class phaseManager : MonoBehaviour {
 
     void fightState()
     {
-        Debug.Log("enemiesList count = " + enemiesArray.Length);
+		
+		//Debug.Log("enemiesList count = " + enemiesArray.Length);
         if (enemiesArray.Length == 0)
         {
             currentState = "BUILD";
@@ -86,10 +95,15 @@ public class phaseManager : MonoBehaviour {
     }
 
     void SpawnEnemies()
-    {
-        float xPos = Random.Range(spawnArea.transform.position.x - width, spawnArea.transform.position.x + width);
-        float yPos = Random.Range(spawnArea.transform.position.y - height, spawnArea.transform.position.y + height);
-        Vector2 spawnLocation = new Vector2(xPos, yPos);
-        GameObject enemy = (GameObject)Instantiate(enemyType, spawnLocation, transform.rotation);
+	{
+		float xPos = Random.Range (spawnArea.transform.position.x - width, spawnArea.transform.position.x + width);
+		float yPos = Random.Range (spawnArea.transform.position.y - height, spawnArea.transform.position.y + height);
+		Vector2 spawnLocation = new Vector2 (xPos, yPos);
+		GameObject enemy = (GameObject)Instantiate (enemyType, spawnLocation, transform.rotation);
+		if (!FishSpawning){
+			FishSpawner.GetComponent<FishSpawner> ().StartCoroutine ("addFish");
+			FishSpawning = true;
+		}
     }
+		
 }

@@ -6,23 +6,41 @@ public class FishSpawner : MonoBehaviour {
 
 	public GameObject Fish_Prefab;
 	public float spawnTime = 2;
+	public float startWait;
+	public int fishCount;
+	Renderer rd;
+	float leftEdge;
+	float rightEdge;
+
 
 	// Use this for initialization
-	void Start () {
-		InvokeRepeating ("addEnemy", 0, spawnTime);
+	void Awake() {
+		rd = GetComponent<Renderer>();
+		leftEdge = transform.position.x - rd.bounds.size.x / 2;
+		rightEdge = transform.position.x + rd.bounds.size.x / 2;
+
 	}
 
-	void addEnemy(){
-		Renderer rd = GetComponent<Renderer>();
+	IEnumerator addFish(){
 
-		float leftEdge = transform.position.x - rd.bounds.size.x / 2;
-		float rightEdge = transform.position.x + rd.bounds.size.x / 2;
+		Debug.Log ("Starting fish");
 
-		Vector2 spawnPoint = new Vector2 (Random.Range(leftEdge, rightEdge), transform.position.y);
 
-		GameObject Fish = Instantiate (Fish_Prefab, spawnPoint, Quaternion.identity);
-		Fish.transform.parent = gameObject.transform;
+		yield return new WaitForSeconds (startWait);
+			for (int i = 0; i < fishCount; i++) {		
+				Vector2 spawnPoint = new Vector2 (Random.Range (leftEdge, rightEdge), transform.position.y);
+				GameObject Fish = Instantiate (Fish_Prefab, spawnPoint, Quaternion.identity);
+				Fish.transform.parent = gameObject.transform;
+				yield return new WaitForSeconds (spawnTime);
+			}
+
+	
 		
 	}
 
+	public void Stop(){
+		StopAllCoroutines ();
+
+		Debug.Log ("Stopping fish");
+	}
 }
