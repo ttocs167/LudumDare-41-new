@@ -7,7 +7,7 @@ public class buildButtonScript : MonoBehaviour
 
     public float gridSize = 1;
     public GameObject towerType;
-    private GameObject player ;
+    private GameObject player;
     private GameObject manager;
     public int price;
 
@@ -18,17 +18,12 @@ public class buildButtonScript : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         manager = GameObject.FindGameObjectWithTag("ManagerObject");
 
+
     }
 
     // Update is called once per frame
-        void Update()
+    public void OnButtonPress()
     {
-
-    }
-
-    void OnMouseDown()
-    {
-
         if (manager.transform.gameObject.GetComponent<phaseManager>().currentState == "BUILD")
         {
             Debug.Log("Button Clicked: meant to spawn tower");
@@ -36,5 +31,5 @@ public class buildButtonScript : MonoBehaviour
         }
     }
 
-    
+
 }
