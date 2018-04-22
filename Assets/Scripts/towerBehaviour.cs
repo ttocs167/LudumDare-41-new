@@ -13,21 +13,28 @@ public class towerBehaviour : MonoBehaviour
     public GameObject bulletType;
     public float bulletSpeed;
     public float rangeTime = 2f;
+    public int health;
 
     private GameObject[] targets;
     private GameObject target;
     private float nextFire = 0f;
-
+    private float radius = 1f;
     // Use this for initialization
     void Start()
     {
-        rend = GetComponent<Renderer>();        
-
+        rend = GetComponent<Renderer>();
+        radius = rend.bounds.extents.magnitude/2.5f;
+        changeScale();
     }
-    public void changeShaderState(float onAlpha,float offAlpha)
+
+    public void changeScale()
     {
-        isShaderOn = !isShaderOn;
-        if (isShaderOn)
+        float scale = range / radius;
+        rend.material.SetFloat("_Scale", scale);
+    }
+    public void changeShaderState(bool setState,float onAlpha,float offAlpha)
+    {        
+        if (setState)
         {
             rend.material.SetFloat("_Alpha", onAlpha);
             rend.material.SetColor("_OutlineColour", Color.red);
@@ -40,10 +47,7 @@ public class towerBehaviour : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetButtonDown("Fire2"))
-        {
-            changeShaderState(0, 0.3f);
-        }
+        changeShaderState(Camera.main.GetComponent<cameraControl>().mapOn, Camera.main.GetComponent<cameraControl>().onAlpha, Camera.main.GetComponent<cameraControl>().offAlpha);
     }
     // Update is called once per frame
     void FixedUpdate()

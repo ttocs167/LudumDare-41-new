@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class cameraControl : MonoBehaviour {
-    private float offAlpha = 0;
-    private float onAlpha = 0.3f;   
+    public float offAlpha = 0;
+    public float onAlpha = 0.3f;
+    public bool mapOn = true;
 	// Use this for initialization
 	void Start () {
 		
@@ -12,6 +13,10 @@ public class cameraControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        if (Input.GetButtonDown("Fire2"))
+        {
+            mapOn = !mapOn;
+        }
+
+    }
 }
