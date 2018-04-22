@@ -37,7 +37,7 @@ Transform:
   m_GameObject: {fileID: 1137643184775598}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 5.7300873, y: -0.04782022, z: 9.957031}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -54,9 +54,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.04, y: -0.11}
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.07
 --- !u!114 &114612711191096284
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -68,7 +68,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 049bb8eb63165e640b396d2818981e8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FishSpawner: {fileID: 0}
+  FishSpawner: {fileID: 1944851100544700, guid: 55fbbca0a49dcc449887c9887a87ee8d,
+    type: 2}
   HookSpeed: 5
 --- !u!212 &212643156166511844
 SpriteRenderer:
@@ -104,7 +105,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 23211a2c51e6bf348b362d8da2a72e37, type: 3}
   m_Color: {r: 1, g: 0.5586207, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
