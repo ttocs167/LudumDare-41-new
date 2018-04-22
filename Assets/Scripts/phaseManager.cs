@@ -4,110 +4,171 @@ using UnityEngine;
 using System.Threading;
 using UnityEngine.UI;
 
-public class phaseManager : MonoBehaviour {
-	//string FIGHT/BUILD/NONE
-	public string currentState;
+public class phaseManager : MonoBehaviour
+{
+    //string FIGHT/BUILD/NONE
+    public string currentState;
 
-	private int enemyCount = 1;
+    private int enemyCount = 1;
     private int waveCounter = 0;
-	private float buildTime;
-	private GameObject[] enemiesArray;
-	//List<GameObject> enemiesList = new List<GameObject>();
+    private float buildTime;
+    private GameObject[] enemiesArray;
+    //List<GameObject> enemiesList = new List<GameObject>();
 
-	public float width = 1f;
-	public float height = 1f;
-	public GameObject spawnArea;
-	public GameObject enemyType;
-	public float maxBuildTime;
-	public Text timer;
+    public float width = 1f;
+    public float height = 1f;
+    public GameObject spawnArea;
+    public GameObject enemyType;
+    public float maxBuildTime;
+    public Text timer;
     public Text waveCount;
 
-	public bool FishSpawning;
+    public bool FishSpawning;
 
-	private GameObject FishSpawner;
-	// Use this for initialization
-	void Start()
-	{
-		currentState = "BUILD";
-		buildTime = maxBuildTime;
-		timer.text = ("" + maxBuildTime);
-		FishSpawner = GameObject.Find("FishSpawner");
+    //BGM Audio
+    public float bgmVolume = 0.10f;
+    private bool bgPlay = false;
+    AudioSource bgMusic;
+    public AudioClip fishingMusic1;
+    public AudioClip fishingMusic2;
 
-	}
+    private GameObject FishSpawner;
+    // Use this for initialization
+    void Start()
+    {
+        currentState = "BUILD";
+        buildTime = maxBuildTime;
+        timer.text = ("" + maxBuildTime);
+        FishSpawner = GameObject.Find("FishSpawner");
 
-	// Update is called once per frame
-	void FixedUpdate()
-	{
-		//Debug.Log("Current State = " + currentState);
-		enemiesArray = GameObject.FindGameObjectsWithTag("Enemy");
+        //Initializes BG music.
+        bgmAudioInit();
+    }
 
-		switch (currentState)
-		{
-		case "BUILD":
-			buildState();
-			break;
-		case "SPAWN":
-			spawnState();
-			break;
-		case "FIGHT":
-			fightState();
-			break;
-		}
-	}
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+        //Debug.Log("Current State = " + currentState);
+        enemiesArray = GameObject.FindGameObjectsWithTag("Enemy");
 
-	void buildState()
-	{	
-		FishSpawner.GetComponent<FishSpawner> ().Stop();
-		FishSpawning = false;
-		buildTime -= Time.deltaTime;
-		timer.text = ("BUILD TIME LEFT: " + Mathf.Floor(buildTime));
-		// do build mode things
+        //Audio
 
-		if (buildTime < 0)
-		{
-			currentState = "SPAWN";
+        switch (currentState)
+        {
+            case "BUILD":
+                buildState();
+                break;
+            case "SPAWN":
+                spawnState();
+                break;
+            case "FIGHT":
+                fightState();
+                break;
+        }
+    }
+
+    void buildState()
+    {
+        FishSpawner.GetComponent<FishSpawner>().Stop();
+        FishSpawning = false;
+        buildTime -= Time.deltaTime;
+        timer.text = ("BUILD TIME LEFT: " + Mathf.Floor(buildTime));
+        // do build mode things
+
+        if (buildTime < 0)
+        {
+            currentState = "SPAWN";
             waveCounter++;
             waveCount.text = ("Wave: " + waveCounter);
-		}
-	}
+        }
+    }
 
-	void spawnState()
-	{
-		currentState = "FIGHT";
+    void spawnState()
+    {
+        currentState = "FIGHT";
 
-		if (enemiesArray.Length == 0)
-		{
-			for (int i = 0; i < enemyCount; i++)
-			{
-				Invoke("SpawnEnemies", 0f);
-			}
-		}
-	}
+        if (enemiesArray.Length == 0)
+        {
+            for (int i = 0; i < enemyCount; i++)
+            {
+                Invoke("SpawnEnemies", 0f);
+            }
+        }
+    }
 
-	void fightState()
-	{
-		//Debug.Log("enemiesList count = " + enemiesArray.Length);
-		if (enemiesArray.Length == 0)
-		{
-			currentState = "BUILD";
-			buildTime = maxBuildTime;
-			enemyCount += 1;
-		}
-		timer.text = ("FIGHT OR FISH!");
-	}
+    void fightState()
+    {
+        //Debug.Log("enemiesList count = " + enemiesArray.Length);
+        if (enemiesArray.Length == 0)
+        {
+            currentState = "BUILD";
+            buildTime = maxBuildTime;
+            enemyCount += 1;
+        }
+        timer.text = ("FIGHT OR FISH!");
+    }
 
-	void SpawnEnemies()
-	{
-		float xPos = Random.Range (spawnArea.transform.position.x - width, spawnArea.transform.position.x + width);
-		float yPos = Random.Range (spawnArea.transform.position.y - height, spawnArea.transform.position.y + height);
-		Vector2 spawnLocation = new Vector2 (xPos, yPos);
-		GameObject enemy = (GameObject)Instantiate (enemyType, spawnLocation, transform.rotation);
-		if (!FishSpawning){
-			FishSpawner.GetComponent<FishSpawner> ().StartCoroutine ("addFish");
-			FishSpawning = true;
-		}
+    void SpawnEnemies()
+    {
+        float xPos = Random.Range(spawnArea.transform.position.x - width, spawnArea.transform.position.x + width);
+        float yPos = Random.Range(spawnArea.transform.position.y - height, spawnArea.transform.position.y + height);
+        Vector2 spawnLocation = new Vector2(xPos, yPos);
+        GameObject enemy = (GameObject)Instantiate(enemyType, spawnLocation, transform.rotation);
+        if (!FishSpawning)
+        {
+            FishSpawner.GetComponent<FishSpawner>().StartCoroutine("addFish");
+            FishSpawning = true;
+        }
 
 
-	}
+    }
+
+    //BGM Audio Manager Section
+    void bgmAudioInit()
+    {
+        bgMusic = GetComponent<AudioSource>();
+        setBgSong(fishingMusic2);
+        StartCoroutine(bgmFadeIn(bgMusic, 5f));
+    }
+
+    //Fade in/out co-routines
+    public IEnumerator bgmFadeIn(AudioSource audioSource, float FadeTime)
+    {
+        Debug.Log("Fade In Started!");
+
+        audioSource.volume = 0;
+        audioSource.loop = true;
+        audioSource.Play();
+
+        while (audioSource.volume < bgmVolume)
+        {
+            audioSource.volume += bgmVolume * Time.deltaTime / FadeTime;
+
+            yield return null;
+        }
+
+    }
+
+    public IEnumerator bgmFadeOut(AudioSource audioSource, float FadeTime)
+    {
+        Debug.Log("Fade Out Started!");
+        float startVolume = audioSource.volume;
+
+        while (audioSource.volume > 0)
+        {
+            audioSource.volume -= startVolume * Time.deltaTime / FadeTime;
+
+            yield return null;
+        }
+
+        audioSource.Stop();
+        audioSource.volume = startVolume;
+    }
+
+    void setBgSong(AudioClip bgmClip)
+    {
+        bgMusic.clip = bgmClip;
+    }
+
 }
 
