@@ -29,7 +29,7 @@ public class buildButtonScript : MonoBehaviour
     void OnMouseDown()
     {
 
-        if (manager.transform.gameObject.GetComponent<phaseManager>().currentState == "BUILD" & manager.transform.gameObject.GetComponent<BuildingManagerScript>().currentMoney >= price)
+        if (manager.transform.gameObject.GetComponent<phaseManager>().currentState == "BUILD")
         {
             Debug.Log("Button Clicked: meant to spawn tower");
             GameObject tower = (GameObject)Instantiate(towerType, player.transform.position, transform.rotation);
