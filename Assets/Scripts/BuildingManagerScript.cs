@@ -13,7 +13,7 @@ public class BuildingManagerScript : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        currentMoney = 450;
+
     }
 	
 	// Update is called once per frame
