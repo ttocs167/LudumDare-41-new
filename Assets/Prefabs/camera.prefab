@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   width: 1
   height: 6
-  spawnArea: {fileID: 0}
+  spawnArea: {fileID: 1407254939133352, guid: 0089be59c16bf87419c6c4394b780ab2, type: 2}
   enemyType: {fileID: 1657560054265660, guid: d6e91e70bf4ade740bf5d846eb52ca7e, type: 2}
 --- !u!114 &114803538710536886
 MonoBehaviour:
@@ -114,11 +114,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   width: 1
-  height: 1
-  spawnArea: {fileID: 0}
+  height: 6
+  spawnArea: {fileID: 1407254939133352, guid: 0089be59c16bf87419c6c4394b780ab2, type: 2}
   enemyType: {fileID: 1657560054265660, guid: d6e91e70bf4ade740bf5d846eb52ca7e, type: 2}
   maxBuildTime: 10
   timer: {fileID: 0}
+  FishSpawning: 1
 --- !u!124 &124369898783576392
 Behaviour:
   m_ObjectHideFlags: 1

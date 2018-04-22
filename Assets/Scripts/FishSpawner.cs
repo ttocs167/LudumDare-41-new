@@ -23,7 +23,7 @@ public class FishSpawner : MonoBehaviour {
 
 	IEnumerator addFish(){
 
-		Debug.Log ("Starting fish");
+		//Debug.Log ("Starting fish");
 
 
 		yield return new WaitForSeconds (startWait);
@@ -41,6 +41,6 @@ public class FishSpawner : MonoBehaviour {
 	public void Stop(){
 		StopAllCoroutines ();
 
-		Debug.Log ("Stopping fish");
+		//Debug.Log ("Stopping fish");
 	}
 }
