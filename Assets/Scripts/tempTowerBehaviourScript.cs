@@ -70,7 +70,7 @@ public class tempTowerBehaviourScript : MonoBehaviour {
 
         for (int i = 0; i < manager.transform.gameObject.GetComponent<BuildingManagerScript>().locationListx.Count; i++)
         {
-            if (posx == manager.transform.gameObject.GetComponent<BuildingManagerScript>().locationListx[i] & posy == cam.transform.gameObject.GetComponent<BuildingManagerScript>().locationListy[i])
+            if (posx == manager.transform.gameObject.GetComponent<BuildingManagerScript>().locationListx[i] & posy == manager.transform.gameObject.GetComponent<BuildingManagerScript>().locationListy[i])
             {
                 overlap = true;
             }
