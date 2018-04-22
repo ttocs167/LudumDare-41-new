@@ -13,7 +13,6 @@ public class towerBehaviour : MonoBehaviour
     public GameObject bulletType;
     public float bulletSpeed;
     public float rangeTime = 2f;
-    public int health;
 
     private GameObject[] targets;
     private GameObject target;

@@ -9,7 +9,6 @@ public class phaseManager : MonoBehaviour {
 	private string currentState;
 
 	private int enemyCount = 1;
-    private int waveCounter = 0;
 	private float buildTime;
 	private GameObject[] enemiesArray;
 	//List<GameObject> enemiesList = new List<GameObject>();
@@ -20,7 +19,6 @@ public class phaseManager : MonoBehaviour {
 	public GameObject enemyType;
 	public float maxBuildTime;
 	public Text timer;
-    public Text waveCount;
 
 	public bool FishSpawning;
 
@@ -66,8 +64,6 @@ public class phaseManager : MonoBehaviour {
 		if (buildTime < 0)
 		{
 			currentState = "SPAWN";
-            waveCounter++;
-            waveCount.text = ("Wave: " + waveCounter);
 		}
 	}
 

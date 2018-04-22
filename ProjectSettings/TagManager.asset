@@ -7,7 +7,6 @@ TagManager:
   - Enemy
   - Fish
   - PlayerFeet
-  - Tower
   layers:
   - Default
   - TransparentFX
