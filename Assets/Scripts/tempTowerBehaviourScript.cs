@@ -8,8 +8,6 @@ public class tempTowerBehaviourScript : MonoBehaviour {
     public GameObject towerType;
     public float spawnTime;
     public GameObject player;
-    public List<int> locationListx;
-    public List<int> locationListy;
     private GameObject self;
     private float distance;
     private float distancex;
@@ -18,6 +16,7 @@ public class tempTowerBehaviourScript : MonoBehaviour {
     private int posx;
     private int posy;
     private bool overlap;
+    public GameObject cam;
 
 
 	// Use this for initialization
@@ -25,17 +24,16 @@ public class tempTowerBehaviourScript : MonoBehaviour {
         self = this.gameObject;
         spawnTime = Time.time;
         player = GameObject.FindGameObjectWithTag("Player");
-        locationListx.Add(1);
-        locationListx.Add(1);
-        locationListy.Add(1);
-        locationListy.Add(-1);
+        cam = GameObject.FindGameObjectWithTag("MainCamera");
+
 
 
     }
 	
 	// Update is called once per frame
 	void Update () {
-        
+
+        overlap = false;
         var cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         var playerPos = player.transform.position;
         cursorPos.z = 45;
@@ -62,9 +60,9 @@ public class tempTowerBehaviourScript : MonoBehaviour {
         posx = (int)cursorPos.x;
         posy = (int)cursorPos.y;
 
-        for (int i = 0; i < locationListy.Count; i++)
+        for (int i = 0; i < cam.transform.gameObject.GetComponent<BuildingManagerScript>().locationListx.Count; i++)
         {
-            if (posx == locationListx[i] & posy == locationListy[i])
+            if (posx == cam.transform.gameObject.GetComponent<BuildingManagerScript>().locationListx[i] & posy == cam.transform.gameObject.GetComponent<BuildingManagerScript>().locationListy[i])
             {
                 overlap = true;
             }
@@ -73,8 +71,8 @@ public class tempTowerBehaviourScript : MonoBehaviour {
         if (Input.GetMouseButtonDown(0) & Time.time > spawnTime + 0.2f & !overlap)
         {
             GameObject tower = (GameObject)Instantiate(towerType, transform.position, transform.rotation);
-            locationListx.Add(posx);
-            locationListy.Add(posy);
+            cam.transform.gameObject.GetComponent<BuildingManagerScript>().locationListx.Add(posx);
+            cam.transform.gameObject.GetComponent<BuildingManagerScript>().locationListy.Add(posy);
             Debug.Log("mouse clicked: meant to place tower");
             spawnTime = Time.time;
             overlap = false;
@@ -82,6 +80,7 @@ public class tempTowerBehaviourScript : MonoBehaviour {
             
             
         }
+        
 
     }
 
