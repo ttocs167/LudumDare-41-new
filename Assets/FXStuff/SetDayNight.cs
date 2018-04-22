@@ -5,7 +5,7 @@ using UnityEngine;
 public class SetDayNight : MonoBehaviour {
     private Renderer rend;
     public float dayAlpha=0;
-    public float nightAlpha = 0.1;
+    public float nightAlpha = 0.1f;
     // Use this for initialization
     void Start () {
         rend = GetComponent<Renderer>();
