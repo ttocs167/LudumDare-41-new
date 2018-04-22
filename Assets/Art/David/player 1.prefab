@@ -201,6 +201,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 125
   maxSpeed: 10
+  PlayerAnimator: {fileID: 0}
+  FeetAnimator: {fileID: 0}
 --- !u!212 &212041113891432664
 SpriteRenderer:
   m_ObjectHideFlags: 1

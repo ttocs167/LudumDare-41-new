@@ -19,7 +19,7 @@ public class playerBehaviour : MonoBehaviour {
     void Start () {
 		rb = GetComponent<Rigidbody2D>();
         PlayerAnimator = this.GetComponentInChildren<Animator>();
-        FeetAnimator = this.transform.GetChild(0).GetComponentInChildren<Animator>();
+        FeetAnimator = GameObject.FindWithTag("PlayerFeet").GetComponent<Animator> ();
     }
 	
 	// Update is called once per frame
@@ -34,15 +34,15 @@ public class playerBehaviour : MonoBehaviour {
         {
             rb.AddForce(input * moveSpeed);
         }
-        if (Vector2.SqrMagnitude(input) <= 0.1f)
+        if (Vector2.SqrMagnitude(input) >= 0.1f)
         {
-            PlayerAnimator.SetBool("Speed", true);
-            FeetAnimator.SetBool("Speed", true);
+            PlayerAnimator.SetBool("Start", true);
+            FeetAnimator.SetBool("Start", true);
         }
         else
         {
-            PlayerAnimator.SetBool("Speed", false);
-            FeetAnimator.SetBool("Speed", false);
+            PlayerAnimator.SetBool("Start", false);
+            FeetAnimator.SetBool("Start", false);
         }
 
 

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Fish
+  - PlayerFeet
   layers:
   - Default
   - TransparentFX
@@ -48,4 +49,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 581855097
+    locked: 0
+  - name: Zombie
+    uniqueID: 3923547797
     locked: 0
