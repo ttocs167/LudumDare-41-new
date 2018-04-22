@@ -138,6 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodHit: {fileID: 1335969390400076, guid: 24c3d0a4d80acb34496f35f1525e370a, type: 2}
+  bloodDeath: {fileID: 1555331058780014, guid: d0b0f2edcd4d2514fa81c1d96f517270, type: 2}
   damage: 1
 --- !u!212 &212371998128089734
 SpriteRenderer:
@@ -171,7 +172,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 519581989
-  m_SortingLayer: 3
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9458d6ce16314c44b8ee471dd3641452, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

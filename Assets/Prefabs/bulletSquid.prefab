@@ -138,6 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodHit: {fileID: 1335969390400076, guid: 24c3d0a4d80acb34496f35f1525e370a, type: 2}
+  bloodDeath: {fileID: 1555331058780014, guid: d0b0f2edcd4d2514fa81c1d96f517270, type: 2}
   damage: 1
 --- !u!212 &212473172591797510
 SpriteRenderer:

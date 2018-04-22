@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class bulletBehaviour : MonoBehaviour {
     public GameObject bloodHit;
+    public GameObject bloodDeath;
     public int damage;
 
     private GameObject bullet;
@@ -33,12 +34,18 @@ public class bulletBehaviour : MonoBehaviour {
             if (healthCheck <= 0)
             {
                 Destroy(collision.transform.gameObject);
-                GameObject deathParticle = (GameObject)Instantiate(bloodHit, transform.position, transform.rotation);
+                GameObject deathParticle = (GameObject)Instantiate(bloodDeath, transform.position, transform.rotation);
                 Destroy(deathParticle, 0.1f);
+
+
 
             }
 
             Destroy(HitParticle, 0.1f);
+            Destroy(bullet);
+        }
+        else
+        {
             Destroy(bullet);
         }
     }

@@ -14,6 +14,9 @@ public class towerBehaviour : MonoBehaviour
     public float bulletSpeed;
     public float rangeTime = 2f;
     public int health;
+    public string towerType;
+    [Range(0f, 10f)]
+    public float spread;
 
     private GameObject[] targets;
     private GameObject target;
@@ -81,11 +84,24 @@ public class towerBehaviour : MonoBehaviour
                 if (Time.time > nextFire)
                 {
                     nextFire = Time.time + rateOfFire;
+                    if (towerType == "Type1")
+                    {
+                        GameObject bullet = (GameObject)Instantiate(bulletType, transform.position, transform.rotation);
+                        bullet.GetComponent<Rigidbody2D>().AddForce(lookDirection * bulletSpeed);
 
-                    GameObject bullet = (GameObject)Instantiate(bulletType, transform.position, transform.rotation);
-                    bullet.GetComponent<Rigidbody2D>().AddForce(lookDirection * bulletSpeed);
+                        Destroy(bullet, rangeTime);
+                    }
+                    if (towerType == "Type2")
+                    {
+                        for (int i = 0; i < 3; i++)
+                        {
+                            GameObject bullet = (GameObject)Instantiate(bulletType, transform.position, transform.rotation);
+                            lookDirection = new Vector2(lookDirection.x + Random.Range(-(i * spread / 10f), (i * spread / 10f)), lookDirection.y + Random.Range(-(i * spread / 10f), (i * spread / 10f)));
+                            bullet.GetComponent<Rigidbody2D>().AddForce(lookDirection * bulletSpeed);
 
-                    Destroy(bullet, rangeTime);
+                            Destroy(bullet, rangeTime);
+                        }
+                    }
                 }
             }
         }

@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 114937194853335258}
   m_Layer: 0
   m_Name: towerSquid
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52,7 +52,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1755575025387608}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.6060624, y: -2.8570569, z: 1}
+  m_LocalPosition: {x: -5.5, y: -0.5, z: 1}
   m_LocalScale: {x: 0.01, y: 0.01, z: 1}
   m_Children:
   - {fileID: 4757418608079214}
@@ -107,7 +107,9 @@ MonoBehaviour:
   bulletType: {fileID: 1680143637391280, guid: c0b32c062f9abc04dab5ef9eb12b04d9, type: 2}
   bulletSpeed: 600
   rangeTime: 2
-  health: 0
+  health: 2
+  towerType: Type2
+  spread: 1
 --- !u!212 &212325827282127914
 SpriteRenderer:
   m_ObjectHideFlags: 1
