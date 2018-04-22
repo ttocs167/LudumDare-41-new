@@ -36,7 +36,7 @@ public class tempTowerBehaviourScript : MonoBehaviour {
         overlap = false;
         var cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         var playerPos = player.transform.position;
-        cursorPos.z = 45;
+        cursorPos.z = 1;
         distancex = cursorPos.x - playerPos.x;
         distancey = cursorPos.y - playerPos.y;
         distance = Mathf.Sqrt(Mathf.Pow(distancex, 2) + Mathf.Pow(distancey, 2));
@@ -52,9 +52,9 @@ public class tempTowerBehaviourScript : MonoBehaviour {
             cursorPos.x = playerPos.x + 2 * gridSize * Mathf.Cos(theta) ;
             cursorPos.y = playerPos.y + 2 * gridSize * Mathf.Sin(theta) ;
         }
-        cursorPos.x = Mathf.Floor(cursorPos.x / gridSize) * (gridSize);
-        cursorPos.y = Mathf.Floor(cursorPos.y / gridSize) * (gridSize);
-        cursorPos.z = playerPos.z;
+        cursorPos.x = Mathf.Floor(cursorPos.x / gridSize) * (gridSize) + 0.5f * gridSize;
+        cursorPos.y = Mathf.Floor(cursorPos.y / gridSize) * (gridSize) + 0.5f * gridSize;
+        cursorPos.z = 1;
         transform.position = cursorPos;
 
         posx = (int)cursorPos.x;

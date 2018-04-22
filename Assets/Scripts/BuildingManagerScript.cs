@@ -8,10 +8,7 @@ public class BuildingManagerScript : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        locationListx.Add(1);
-        locationListx.Add(1);
-        locationListy.Add(1);
-        locationListy.Add(-1);
+
     }
 	
 	// Update is called once per frame
