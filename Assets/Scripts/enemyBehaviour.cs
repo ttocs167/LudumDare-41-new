@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class enemyBehaviour : MonoBehaviour {
     public float maxSpeed;
@@ -81,7 +82,7 @@ public class enemyBehaviour : MonoBehaviour {
                         if (target.transform.gameObject.GetComponent<playerBehaviour>().health <= 0)
                         {
                             Debug.Log("PLAYER DEAD");
-                            // kill player go to game over state
+                            SceneManager.LoadScene(1);
                         }
                     }
                     if (target.tag == "Tower")
