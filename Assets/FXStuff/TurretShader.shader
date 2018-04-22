@@ -49,7 +49,7 @@
 			float1 _Alpha;
 			float4 frag(v2f i) : SV_TARGET
 			{
-				float1 alpha = _Alpha * (1 - (i.uv.r - 0.5f)*(i.uv.r - 0.5f) - (i.uv.g - 0.5f)*(i.uv.g - 0.5f));
+				float1 alpha = _Alpha * (0.5 - (i.uv.r - 0.5f)*(i.uv.r - 0.5f) - (i.uv.g - 0.5f)*(i.uv.g - 0.5f));
 				float4 color = tex2D(_MainTex, i.uv)*_Colour*float4(1,1,1,alpha);
 				return color;
 			}
