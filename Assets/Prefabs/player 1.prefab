@@ -125,7 +125,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1661846343346520}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.93, y: -0.8965192, z: 0.035788573}
+  m_LocalPosition: {x: 3.93, y: -0.8965192, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4417392519780008}
@@ -201,6 +201,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 125
   maxSpeed: 10
+  Hook_prefab: {fileID: 0}
+  FishSpawner: {fileID: 0}
+  HookSpeed: 0.5
   PlayerAnimator: {fileID: 0}
   FeetAnimator: {fileID: 0}
 --- !u!212 &212041113891432664
