@@ -88,7 +88,7 @@ Animator:
   m_GameObject: {fileID: 1439984047272228}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2c7d7b906d9732646a311b00db4e1285, type: 2}
+  m_Controller: {fileID: 9100000, guid: 80f1599e7aea70b4cb72e839049b0324, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -109,8 +109,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 125
   maxSpeed: 10
-  PlayerAnimator: {fileID: 0}
-  FeetAnimator: {fileID: 0}
+  Hook_prefab: {fileID: 0}
+  FishSpawner: {fileID: 0}
+  HookSpeed: 5
+  PlayerAnimator: {fileID: 95087944716398730}
+  FeetAnimator: {fileID: 95087944716398730}
 --- !u!212 &212729239937303570
 SpriteRenderer:
   m_ObjectHideFlags: 1
