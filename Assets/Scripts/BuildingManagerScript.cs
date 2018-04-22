@@ -8,8 +8,6 @@ public class BuildingManagerScript : MonoBehaviour {
     public List<int> locationListy;
     public int currentMoney;
     public Text Gold;
-    
-    private GameObject goldDisplay;
 
     // Use this for initialization
     void Start () {

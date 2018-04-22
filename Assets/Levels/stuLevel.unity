@@ -252,13 +252,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114619162692475218, guid: da0a5e8c7c827ef4d94f5e3d9b260c30,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: Gold
       value: 
       objectReference: {fileID: 815537973}
-    - target: {fileID: 114619162692475218, guid: da0a5e8c7c827ef4d94f5e3d9b260c30,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: currentMoney
       value: 450
       objectReference: {fileID: 0}
@@ -367,6 +365,11 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114799333857124226, guid: 71d6dbf835c30a6429f5ee111132ff52,
+        type: 2}
+      propertyPath: m_Text
+      value: 450
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 71d6dbf835c30a6429f5ee111132ff52, type: 2}
@@ -797,6 +800,16 @@ Prefab:
       propertyPath: m_TagString
       value: ManagerObject
       objectReference: {fileID: 0}
+    - target: {fileID: 114949781378374998, guid: 86b9a79d3f3dc4c4ab8c3e608f4dbd75,
+        type: 2}
+      propertyPath: currentMoney
+      value: 450
+      objectReference: {fileID: 0}
+    - target: {fileID: 114949781378374998, guid: 86b9a79d3f3dc4c4ab8c3e608f4dbd75,
+        type: 2}
+      propertyPath: Gold
+      value: 
+      objectReference: {fileID: 815537973}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 86b9a79d3f3dc4c4ab8c3e608f4dbd75, type: 2}
   m_IsPrefabParent: 0

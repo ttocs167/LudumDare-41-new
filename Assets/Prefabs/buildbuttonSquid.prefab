@@ -67,7 +67,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gridSize: 1
   towerType: {fileID: 1359575829509478, guid: ee3591b0486ede142942566e8428c19d, type: 2}
-  player: {fileID: 1439984047272228, guid: d3ef7c004f98f2d419eb1decc1982070, type: 2}
+  price: 250
 --- !u!212 &212394840398657850
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -76,13 +76,13 @@ public class tempTowerBehaviourScript : MonoBehaviour {
             }
         }
 
-        if (Input.GetMouseButtonDown(0) & Time.time > spawnTime + 0.2f & !overlap & manager.transform.gameObject.GetComponent<phaseManager>().currentState == "BUILD")
+        if (Input.GetMouseButtonDown(0) & Time.time > spawnTime + 0.2f & !overlap & manager.transform.gameObject.GetComponent<phaseManager>().currentState == "BUILD" & manager.transform.gameObject.GetComponent<BuildingManagerScript>().currentMoney >= price)
         {
             GameObject tower = (GameObject)Instantiate(towerType, transform.position, transform.rotation);
             manager.transform.gameObject.GetComponent<BuildingManagerScript>().currentMoney -= price;
             manager.transform.gameObject.GetComponent<BuildingManagerScript>().locationListx.Add(posx);
             manager.transform.gameObject.GetComponent<BuildingManagerScript>().locationListy.Add(posy);
-            //Debug.Log("mouse clicked: meant to place tower");
+            Debug.Log("mouse clicked: meant to place tower");
             spawnTime = Time.time;
 
             overlap = false;
