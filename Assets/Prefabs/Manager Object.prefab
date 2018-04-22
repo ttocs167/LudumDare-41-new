@@ -57,3 +57,5 @@ MonoBehaviour:
   enemyType: {fileID: 1039440989038814, guid: 43de4916b7b86594db9f9164373ab434, type: 2}
   maxBuildTime: 5
   timer: {fileID: 0}
+  waveCount: {fileID: 0}
+  FishSpawning: 0

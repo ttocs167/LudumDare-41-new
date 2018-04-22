@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114288203554807560}
   m_Layer: 0
   m_Name: towerBlue
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -64,7 +64,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1452199705445866}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.1791172, y: 1.0497494, z: 1}
+  m_LocalPosition: {x: -5.03702, y: -1.4702218, z: 1}
   m_LocalScale: {x: 0.01, y: 0.01, z: 1}
   m_Children:
   - {fileID: 4454097371931212}
@@ -87,8 +87,9 @@ MonoBehaviour:
   damage: 1
   rateOfFire: 1
   bulletType: {fileID: 1555386791921450, guid: c2befe0fb8472d043afc8b4fa4b4293a, type: 2}
-  bulletSpeed: 600
+  bulletSpeed: 700
   rangeTime: 2
+  health: 3
 --- !u!212 &212507422936708688
 SpriteRenderer:
   m_ObjectHideFlags: 1
