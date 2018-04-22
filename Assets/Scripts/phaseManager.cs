@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class phaseManager : MonoBehaviour {
 	//string FIGHT/BUILD/NONE
-	private string currentState;
+	public string currentState;
 
 	private int enemyCount = 1;
     private int waveCounter = 0;

@@ -7,7 +7,7 @@ public class tempTowerBehaviourScript : MonoBehaviour {
     public float gridSize = 1;
     public GameObject towerType;
     public float spawnTime;
-    public GameObject player;
+    private GameObject player;
     private GameObject self;
     private float distance;
     private float distancex;
@@ -16,15 +16,17 @@ public class tempTowerBehaviourScript : MonoBehaviour {
     private int posx;
     private int posy;
     private bool overlap;
-    public GameObject cam;
+    private GameObject cam;
+    private GameObject manager;
 
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         self = this.gameObject;
         spawnTime = Time.time;
         player = GameObject.FindGameObjectWithTag("Player");
         cam = GameObject.FindGameObjectWithTag("MainCamera");
+        manager = GameObject.FindGameObjectWithTag("ManagerObject");
 
 
 
@@ -32,6 +34,10 @@ public class tempTowerBehaviourScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (manager.transform.gameObject.GetComponent<phaseManager>().currentState != "BUILD")
+        {
+            Destroy(self);
+        }
 
         overlap = false;
         var cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -68,7 +74,7 @@ public class tempTowerBehaviourScript : MonoBehaviour {
             }
         }
 
-        if (Input.GetMouseButtonDown(0) & Time.time > spawnTime + 0.2f & !overlap)
+        if (Input.GetMouseButtonDown(0) & Time.time > spawnTime + 0.2f & !overlap & manager.transform.gameObject.GetComponent<phaseManager>().currentState == "BUILD")
         {
             GameObject tower = (GameObject)Instantiate(towerType, transform.position, transform.rotation);
             cam.transform.gameObject.GetComponent<BuildingManagerScript>().locationListx.Add(posx);
