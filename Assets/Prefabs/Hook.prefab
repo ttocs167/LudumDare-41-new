@@ -68,7 +68,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 049bb8eb63165e640b396d2818981e8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FishSpawner: {fileID: 0}
+  FishSpawner: {fileID: 1944851100544700, guid: 55fbbca0a49dcc449887c9887a87ee8d,
+    type: 2}
   HookSpeed: 5
 --- !u!212 &212643156166511844
 SpriteRenderer:
