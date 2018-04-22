@@ -52,7 +52,7 @@ public class phaseManager : MonoBehaviour {
     void buildState()
     {
         buildTime -= Time.deltaTime;
-        timer.text = ("" + buildTime);
+        timer.text = ("BUILD TIME LEFT: " + Mathf.Floor(buildTime));
         // do build mode things
 
         if (buildTime < 0)
@@ -83,6 +83,7 @@ public class phaseManager : MonoBehaviour {
             buildTime = maxBuildTime;
             enemyCount += 1;
         }
+        timer.text = ("FIGHT OR FISH!");
     }
 
     void SpawnEnemies()
