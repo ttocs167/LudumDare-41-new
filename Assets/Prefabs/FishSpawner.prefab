@@ -137,7 +137,7 @@ MonoBehaviour:
     type: 2}
   spawnTime: 2
   startWait: 0
-  fishCount: 50
+  fishCount: 117
 --- !u!212 &212190420509740646
 SpriteRenderer:
   m_ObjectHideFlags: 1
