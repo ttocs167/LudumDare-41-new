@@ -7,7 +7,7 @@ public class buildButtonScript : MonoBehaviour
 
     public float gridSize = 1;
     public GameObject towerType;
-    public GameObject player ;
+    private GameObject player ;
     private GameObject manager;
 
 

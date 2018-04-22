@@ -16,7 +16,6 @@ public class tempTowerBehaviourScript : MonoBehaviour {
     private int posx;
     private int posy;
     private bool overlap;
-    private GameObject cam;
     private GameObject manager;
     public int price;
 
@@ -27,7 +26,6 @@ public class tempTowerBehaviourScript : MonoBehaviour {
         self = this.gameObject;
         spawnTime = Time.time;
         player = GameObject.FindGameObjectWithTag("Player");
-        cam = GameObject.FindGameObjectWithTag("MainCamera");
         manager = GameObject.FindGameObjectWithTag("ManagerObject");
 
 
@@ -70,9 +68,9 @@ public class tempTowerBehaviourScript : MonoBehaviour {
         posx = (int)cursorPos.x;
         posy = (int)cursorPos.y;
 
-        for (int i = 0; i < cam.transform.gameObject.GetComponent<BuildingManagerScript>().locationListx.Count; i++)
+        for (int i = 0; i < manager.transform.gameObject.GetComponent<BuildingManagerScript>().locationListx.Count; i++)
         {
-            if (posx == cam.transform.gameObject.GetComponent<BuildingManagerScript>().locationListx[i] & posy == cam.transform.gameObject.GetComponent<BuildingManagerScript>().locationListy[i])
+            if (posx == manager.transform.gameObject.GetComponent<BuildingManagerScript>().locationListx[i] & posy == cam.transform.gameObject.GetComponent<BuildingManagerScript>().locationListy[i])
             {
                 overlap = true;
             }
@@ -81,9 +79,9 @@ public class tempTowerBehaviourScript : MonoBehaviour {
         if (Input.GetMouseButtonDown(0) & Time.time > spawnTime + 0.2f & !overlap & manager.transform.gameObject.GetComponent<phaseManager>().currentState == "BUILD")
         {
             GameObject tower = (GameObject)Instantiate(towerType, transform.position, transform.rotation);
-            cam.transform.gameObject.GetComponent<BuildingManagerScript>().currentMoney -= price;
-            cam.transform.gameObject.GetComponent<BuildingManagerScript>().locationListx.Add(posx);
-            cam.transform.gameObject.GetComponent<BuildingManagerScript>().locationListy.Add(posy);
+            manager.transform.gameObject.GetComponent<BuildingManagerScript>().currentMoney -= price;
+            manager.transform.gameObject.GetComponent<BuildingManagerScript>().locationListx.Add(posx);
+            manager.transform.gameObject.GetComponent<BuildingManagerScript>().locationListy.Add(posy);
             //Debug.Log("mouse clicked: meant to place tower");
             spawnTime = Time.time;
 
