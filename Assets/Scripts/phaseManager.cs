@@ -24,7 +24,10 @@ public class phaseManager : MonoBehaviour
     public Text waveCount;
 
     public bool FishSpawning;
-
+    //SetDay Night
+    private SetDayNight setDayNight;
+    public GameObject setDayNightGO;
+    public GameObject rainParticles;
     //BGM Audio
     public float bgmVolume = 0.10f;
     private bool bgPlay = false;
@@ -41,6 +44,11 @@ public class phaseManager : MonoBehaviour
         timer.text = ("" + maxBuildTime);
         FishSpawner = GameObject.Find("FishSpawner");
 
+        if (setDayNightGO != null)
+        {
+            setDayNight = setDayNightGO.GetComponent<SetDayNight>();
+
+        }
         //Initializes BG music.
         bgmAudioInit();
     }
@@ -77,6 +85,14 @@ public class phaseManager : MonoBehaviour
 
         if (buildTime < 0)
         {
+            if (setDayNight != null)
+            {
+                setDayNight.StartNight();
+            }
+            if(rainParticles!=null)
+            {
+                rainParticles.SetActive(true);
+            }
             currentState = "SPAWN";
             waveCounter++;
             waveCount.text = ("Wave: " + waveCounter);
@@ -101,6 +117,14 @@ public class phaseManager : MonoBehaviour
         //Debug.Log("enemiesList count = " + enemiesArray.Length);
         if (enemiesArray.Length == 0)
         {
+            if (setDayNight != null)
+            {
+                setDayNight.StartDay();
+            }
+            if (rainParticles != null)
+            {
+                rainParticles.SetActive(false);
+            }
             currentState = "BUILD";
             buildTime = maxBuildTime;
             enemyCount += 1;
