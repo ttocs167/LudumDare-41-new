@@ -22,7 +22,7 @@ public class towerBehaviour : MonoBehaviour
     void Start()
     {
         rend = GetComponent<Renderer>();
-        radius = rend.bounds.extents.magnitude/2;
+        radius = rend.bounds.extents.magnitude/2.5f;
         changeScale();
     }
 

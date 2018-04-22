@@ -152,6 +152,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114214122469549124, guid: da0a5e8c7c827ef4d94f5e3d9b260c30,
+        type: 2}
+      propertyPath: onAlpha
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: da0a5e8c7c827ef4d94f5e3d9b260c30, type: 2}
   m_IsPrefabParent: 0
@@ -239,22 +244,6 @@ Prefab:
     - target: {fileID: 4504186947372570, guid: 96a32f0232b89f949bcc1e46c21dc0d4, type: 2}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114288203554807560, guid: 96a32f0232b89f949bcc1e46c21dc0d4,
-        type: 2}
-      propertyPath: bulletType
-      value: 
-      objectReference: {fileID: 1555386791921450, guid: c2befe0fb8472d043afc8b4fa4b4293a,
-        type: 2}
-    - target: {fileID: 114288203554807560, guid: 96a32f0232b89f949bcc1e46c21dc0d4,
-        type: 2}
-      propertyPath: bulletSpeed
-      value: 600
-      objectReference: {fileID: 0}
-    - target: {fileID: 212507422936708688, guid: 96a32f0232b89f949bcc1e46c21dc0d4,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 96a32f0232b89f949bcc1e46c21dc0d4, type: 2}
