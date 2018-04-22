@@ -10,7 +10,7 @@
 	{
 		Tags
 		{
-			"Queue" = "Transparent"
+			"Queue" = "Overlay"
 		}
 		Pass
 		{
