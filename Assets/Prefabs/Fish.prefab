@@ -109,6 +109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: -100
   Coin: {fileID: 1163340531528096, guid: d3c03ad1bb0a7cc479eb6af67a794dbc, type: 2}
+  Value: 5
 --- !u!212 &212880897288968660
 SpriteRenderer:
   m_ObjectHideFlags: 1

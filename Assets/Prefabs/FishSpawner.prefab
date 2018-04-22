@@ -135,17 +135,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Fish_Prefab: {fileID: 1717312324799588, guid: c133015bd7cd9cc46b49ed38c18331c1,
     type: 2}
-  spawnTime: 2
+  spawnTime: 1
   startWait: 0
-  fishCount: 117
-  smFishVal: 3
-  smFishSpeed: 200
+  fishCount: 200
+  smFishVal: 5
+  smFishSpeed: 150
   smFishScale: 2
-  medFishVal: 7
-  medFishSpeed: 70
+  medFishVal: 10
+  medFishSpeed: 300
   medFishScale: 4
-  lgFishVal: 10
-  lgFishSpeed: 100
+  lgFishVal: 20
+  lgFishSpeed: 450
   lgFishScale: 6
 --- !u!212 &212190420509740646
 SpriteRenderer:
