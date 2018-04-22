@@ -33,3 +33,5 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+Assets/SFX/fishing reel.wav.meta
+Assets/SFX/water splash.wav.meta

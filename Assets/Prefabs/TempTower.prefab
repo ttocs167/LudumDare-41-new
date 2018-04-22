@@ -85,8 +85,6 @@ MonoBehaviour:
   gridSize: 1
   towerType: {fileID: 1452199705445866, guid: 96a32f0232b89f949bcc1e46c21dc0d4, type: 2}
   spawnTime: 0
-  player: {fileID: 0}
-  cam: {fileID: 0}
 --- !u!212 &212340729814782716
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -101,7 +99,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 04d2442e2e703284388431ae8819b4c4, type: 2}
+  - {fileID: 2100000, guid: b6070c3079ae62c4d8f65114e2aee30c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -122,7 +120,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 521864fa5741c2040a7d80a5631e180b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.291}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.503}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -145,7 +143,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b6070c3079ae62c4d8f65114e2aee30c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

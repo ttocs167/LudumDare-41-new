@@ -31,13 +31,15 @@ public class tempTowerBehaviourScript : MonoBehaviour {
 
 
     }
-	
-	// Update is called once per frame
-	void Update () {
-        if (manager.transform.gameObject.GetComponent<phaseManager>().currentState != "BUILD")
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (manager.transform.gameObject.GetComponent<phaseManager>().currentState != "BUILD" || Input.GetMouseButtonDown(1) )
         {
             Destroy(self);
         }
+
 
         overlap = false;
         var cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -55,8 +57,8 @@ public class tempTowerBehaviourScript : MonoBehaviour {
 
         if (distance > gridSize * 2)
         {
-            cursorPos.x = playerPos.x + 2 * gridSize * Mathf.Cos(theta) ;
-            cursorPos.y = playerPos.y + 2 * gridSize * Mathf.Sin(theta) ;
+            cursorPos.x = playerPos.x + 2 * gridSize * Mathf.Cos(theta);
+            cursorPos.y = playerPos.y + 2 * gridSize * Mathf.Sin(theta);
         }
         cursorPos.x = Mathf.Floor(cursorPos.x / gridSize) * (gridSize) + 0.5f * gridSize;
         cursorPos.y = Mathf.Floor(cursorPos.y / gridSize) * (gridSize) + 0.5f * gridSize;
@@ -83,10 +85,10 @@ public class tempTowerBehaviourScript : MonoBehaviour {
             spawnTime = Time.time;
             overlap = false;
             Destroy(self);
-            
-            
+
+
         }
-        
+
 
     }
 
