@@ -85,6 +85,7 @@ MonoBehaviour:
   gridSize: 1
   towerType: {fileID: 1452199705445866, guid: 96a32f0232b89f949bcc1e46c21dc0d4, type: 2}
   spawnTime: 0
+  price: 50
 --- !u!212 &212340729814782716
 SpriteRenderer:
   m_ObjectHideFlags: 1

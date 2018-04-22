@@ -18,6 +18,8 @@ public class tempTowerBehaviourScript : MonoBehaviour {
     private bool overlap;
     private GameObject cam;
     private GameObject manager;
+    public int price;
+
 
 
     // Use this for initialization
@@ -79,10 +81,12 @@ public class tempTowerBehaviourScript : MonoBehaviour {
         if (Input.GetMouseButtonDown(0) & Time.time > spawnTime + 0.2f & !overlap & manager.transform.gameObject.GetComponent<phaseManager>().currentState == "BUILD")
         {
             GameObject tower = (GameObject)Instantiate(towerType, transform.position, transform.rotation);
+            cam.transform.gameObject.GetComponent<BuildingManagerScript>().currentMoney -= price;
             cam.transform.gameObject.GetComponent<BuildingManagerScript>().locationListx.Add(posx);
             cam.transform.gameObject.GetComponent<BuildingManagerScript>().locationListy.Add(posy);
-            Debug.Log("mouse clicked: meant to place tower");
+            //Debug.Log("mouse clicked: meant to place tower");
             spawnTime = Time.time;
+
             overlap = false;
             Destroy(self);
 
