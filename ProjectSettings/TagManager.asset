@@ -50,6 +50,9 @@ TagManager:
   - name: Player
     uniqueID: 581855097
     locked: 0
+  - name: Bullet
+    uniqueID: 519581989
+    locked: 0
   - name: Zombie
     uniqueID: 3923547797
     locked: 0
