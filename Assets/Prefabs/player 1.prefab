@@ -201,6 +201,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 125
   maxSpeed: 10
+  Hook_prefab: {fileID: 0}
+  FishSpawner: {fileID: 0}
+  HookSpeed: 0.5
   PlayerAnimator: {fileID: 0}
   FeetAnimator: {fileID: 0}
 --- !u!212 &212041113891432664
