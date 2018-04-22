@@ -115,6 +115,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   locationListx: 
   locationListy: 
+  currentMoney: 450
+  Gold: {fileID: 114799333857124226, guid: 71d6dbf835c30a6429f5ee111132ff52, type: 2}
 --- !u!114 &114682229867979932
 MonoBehaviour:
   m_ObjectHideFlags: 1

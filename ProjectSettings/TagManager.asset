@@ -9,6 +9,7 @@ TagManager:
   - PlayerFeet
   - Tower
   - ManagerObject
+  - GoldDisplay
   layers:
   - Default
   - TransparentFX
