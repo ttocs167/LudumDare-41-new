@@ -57,7 +57,7 @@ MonoBehaviour:
   height: 6
   spawnArea: {fileID: 0}
   enemyType: {fileID: 1039440989038814, guid: 43de4916b7b86594db9f9164373ab434, type: 2}
-  maxBuildTime: 5
+  maxBuildTime: 10
   timer: {fileID: 114438738065914702, guid: f662490b135a4af43a08224a1f6f3eb2, type: 2}
   waveCount: {fileID: 114667024277757810, guid: a11c62d6f338ed04c8606462ee6c8611,
     type: 2}

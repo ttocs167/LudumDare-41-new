@@ -138,6 +138,15 @@ MonoBehaviour:
   spawnTime: 2
   startWait: 0
   fishCount: 117
+  smFishVal: 3
+  smFishSpeed: 200
+  smFishScale: 2
+  medFishVal: 7
+  medFishSpeed: 70
+  medFishScale: 4
+  lgFishVal: 10
+  lgFishSpeed: 100
+  lgFishScale: 6
 --- !u!212 &212190420509740646
 SpriteRenderer:
   m_ObjectHideFlags: 1
