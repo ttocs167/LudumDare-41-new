@@ -10,6 +10,8 @@ TagManager:
   - Tower
   - ManagerObject
   - GoldDisplay
+  - Rod
+  - PlayerSprite
   layers:
   - Default
   - TransparentFX

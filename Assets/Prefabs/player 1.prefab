@@ -20,13 +20,14 @@ GameObject:
   m_Component:
   - component: {fileID: 4101026259333300}
   - component: {fileID: 212166683230876610}
+  - component: {fileID: 95369500662011530}
   m_Layer: 0
   m_Name: Rod
-  m_TagString: Untagged
+  m_TagString: Rod
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1198267566149392
 GameObject:
   m_ObjectHideFlags: 1
@@ -56,7 +57,7 @@ GameObject:
   - component: {fileID: 95750699959414202}
   m_Layer: 0
   m_Name: Guy_0
-  m_TagString: Untagged
+  m_TagString: PlayerSprite
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,6 +73,7 @@ GameObject:
   - component: {fileID: 212595182892089254}
   - component: {fileID: 50979349877334248}
   - component: {fileID: 114987716144490972}
+  - component: {fileID: 58949881470811506}
   m_Layer: 0
   m_Name: player 1
   m_TagString: Player
@@ -86,7 +88,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1055958910631484}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.872, z: 0}
+  m_LocalPosition: {x: 0.001, y: 0.636, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4840076891618074}
@@ -153,7 +155,39 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!58 &58949881470811506
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1661846343346520}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.1
+--- !u!95 &95369500662011530
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1055958910631484}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f350330aabfa21048b6470664f47a3bb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!95 &95750699959414202
 Animator:
   serializedVersion: 3
@@ -205,8 +239,6 @@ MonoBehaviour:
   Hook_prefab: {fileID: 0}
   FishSpawner: {fileID: 0}
   HookSpeed: 5
-  PlayerAnimator: {fileID: 0}
-  FeetAnimator: {fileID: 0}
 --- !u!212 &212041113891432664
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -283,7 +315,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1071978451
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 70c3535fa01a91540a989be5cfd5376f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -329,12 +361,12 @@ SpriteRenderer:
   m_SortingLayerID: 581855097
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: be9faf88667654649b4f5dc6f65b81b0, type: 3}
+  m_Sprite: {fileID: 21300002, guid: be9faf88667654649b4f5dc6f65b81b0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.64, y: 1.28}
+  m_Size: {x: 0.64, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
