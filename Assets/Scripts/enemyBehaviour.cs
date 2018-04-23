@@ -52,9 +52,25 @@ public class enemyBehaviour : MonoBehaviour {
         if (Random.Range(0, 1f) > 0.9)
         {
 
-            if (RHF != null)
+            if (Random.value < 0.25)
             {
                 RHF.setText("OMG IS THAT CLAUDE VAN CLAM!");
+            }
+            else if (Random.value < 0.5)
+            {
+                RHF.setText("Ocean Man Take Me By The Hand!");
+            }
+            else if (Random.value < 0.75)
+            {
+                RHF.setText("I'M PECKISH!");
+            }
+            else if (Random.value < 0.99)
+            {
+                RHF.setText("Barbarity Was Best!");
+            }
+            else
+            {
+                RHF.setText("His Wife Doesn't Love Me!");
             }
         }
         Invoke("SaySomething", 2);
