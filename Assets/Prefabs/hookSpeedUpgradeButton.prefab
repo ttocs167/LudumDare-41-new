@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 222531160985523442}
   - component: {fileID: 114746905846543360}
   - component: {fileID: 114858025423210640}
-  - component: {fileID: 114632216855109078}
+  - component: {fileID: 114084318558969838}
   m_Layer: 5
   m_Name: hookSpeedUpgradeButton
   m_TagString: Untagged
@@ -47,6 +47,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &114084318558969838
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1640590884528442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 484e386c29cc5e24a9f6b92e7677c228, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgrade: Speed
+  price: 200
+  textbox: {fileID: 114247460489653352}
+  hook: {fileID: 1137643184775598, guid: ba84ddd1467ce1c458892af7cfa5f232, type: 2}
 --- !u!114 &114247460489653352
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -80,24 +95,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 200
---- !u!114 &114632216855109078
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1640590884528442}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113dd84f74182a741b3d1d0cb1194dc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  maxSpeed: 10
-  health: 0
-  maxHealth: 0
-  Hook_prefab: {fileID: 0}
-  FishSpawner: {fileID: 0}
-  HookSpeed: 5
 --- !u!114 &114746905846543360
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -165,8 +162,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114632216855109078}
-        m_MethodName: UpgradeHookSpeed
+      - m_Target: {fileID: 114084318558969838}
+        m_MethodName: OnButtonPress
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
