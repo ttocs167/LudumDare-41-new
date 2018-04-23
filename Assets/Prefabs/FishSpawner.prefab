@@ -65,8 +65,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1944851100544700}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.04, y: 6.46, z: 0}
-  m_LocalScale: {x: 117.18595, y: 21.132488, z: 1}
+  m_LocalPosition: {x: 7.516, y: 6.46, z: 0}
+  m_LocalScale: {x: 90.976974, y: 21.132488, z: 1}
   m_Children:
   - {fileID: 4767759379370818}
   m_Father: {fileID: 0}
@@ -134,6 +134,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Fish_Prefab: {fileID: 1717312324799588, guid: c133015bd7cd9cc46b49ed38c18331c1,
+    type: 2}
+  Fish2_Prefab: {fileID: 1895500516209924, guid: 8088ad4fd5df02b4fb63cc8a33b6bc2b,
+    type: 2}
+  Tri_Prefab: {fileID: 1248261343885802, guid: e56fa95c7b67d524d807dead836989d5, type: 2}
+  Octo_Prefab: {fileID: 1677047602732054, guid: 10f04e9d4d9473640b635ad85efefb53,
     type: 2}
   spawnTime: 1
   startWait: 0

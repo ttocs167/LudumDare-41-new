@@ -5,7 +5,10 @@ using UnityEngine;
 public class FishSpawner : MonoBehaviour {
 
 	public GameObject Fish_Prefab;
-	public float spawnTime = 2;
+    public GameObject Fish2_Prefab;
+    public GameObject Tri_Prefab;
+    public GameObject Octo_Prefab;
+    public float spawnTime = 2;
 	public float startWait;
 	public int fishCount;
 	Renderer rd;
@@ -38,31 +41,70 @@ public class FishSpawner : MonoBehaviour {
 		yield return new WaitForSeconds (startWait);
 			for (int i = 0; i < fishCount; i++) {		
 				Vector2 spawnPoint = new Vector2 (Random.Range (leftEdge, rightEdge), transform.position.y);
-				int fishSize = Random.Range (1, 10);						
-				GameObject Fish = Instantiate (Fish_Prefab, spawnPoint, Quaternion.identity);
+				int fishSize = Random.Range (1, 30);
                 
 			if (fishSize < 5) {
-				Fish.GetComponent<Fish_Behaviour>().Value = smFishVal;
+                GameObject Fish = Instantiate(Fish_Prefab, spawnPoint, Quaternion.identity);
+                Fish.GetComponent<Fish_Behaviour>().Value = smFishVal;
 				Fish.GetComponent<Fish_Behaviour>().speed = -smFishSpeed;
-				Fish.transform.localScale = new Vector3 (smFishScale, smFishScale, 1);
-                
-			}	
+                Fish.transform.localScale = new Vector3 (smFishScale, smFishScale, 1);
+                Fish.transform.parent = gameObject.transform;
+            }	
 			if (fishSize >= 6 && fishSize <= 8) {
-				Fish.GetComponent<Fish_Behaviour>().Value = medFishVal;
+                GameObject Fish = Instantiate(Fish_Prefab, spawnPoint, Quaternion.identity);
+                Fish.GetComponent<Fish_Behaviour>().Value = medFishVal;
 				Fish.GetComponent<Fish_Behaviour>().speed = -medFishSpeed;
 				Fish.transform.localScale = new Vector3 (medFishScale, medFishScale, 1);
-                
+                Fish.transform.parent = gameObject.transform;
             }
-			if (fishSize == 9) {
-				Fish.GetComponent<Fish_Behaviour>().Value = lgFishVal;
+			if (fishSize >= 9 && fishSize <= 12) {
+                GameObject Fish = Instantiate(Fish_Prefab, spawnPoint, Quaternion.identity);
+                Fish.GetComponent<Fish_Behaviour>().Value = lgFishVal;
 				Fish.GetComponent<Fish_Behaviour>().speed = -lgFishSpeed;
 				Fish.transform.localScale = new Vector3 (lgFishScale, lgFishScale, 1);
-                
-            }	
-							
-				
-				Fish.transform.parent = gameObject.transform;
-				yield return new WaitForSeconds (spawnTime);
+                Fish.transform.parent = gameObject.transform;
+            }
+            if (fishSize >= 13 && fishSize <= 16)
+            {
+                GameObject Fish = Instantiate(Fish2_Prefab, spawnPoint, Quaternion.identity);
+                Fish.GetComponent<Fish_Behaviour>().Value = medFishVal;
+                Fish.GetComponent<Fish_Behaviour>().speed = -medFishSpeed;
+                Fish.transform.localScale = new Vector3(medFishScale, medFishScale, 1);
+                Fish.transform.parent = gameObject.transform;
+            }
+            if (fishSize >= 17 && fishSize <= 21)
+            {
+                GameObject Fish = Instantiate(Fish2_Prefab, spawnPoint, Quaternion.identity);
+                Fish.GetComponent<Fish_Behaviour>().Value = lgFishVal;
+                Fish.GetComponent<Fish_Behaviour>().speed = -lgFishSpeed;
+                Fish.transform.localScale = new Vector3(lgFishScale, lgFishScale, 1);
+                Fish.transform.parent = gameObject.transform;
+            }
+            if (fishSize >= 21 && fishSize <= 24)
+            {
+                GameObject Fish = Instantiate(Octo_Prefab, spawnPoint, Quaternion.identity);
+                Fish.GetComponent<Fish_Behaviour>().Value = medFishVal;
+                Fish.GetComponent<Fish_Behaviour>().speed = -medFishSpeed;
+                Fish.transform.localScale = new Vector3(smFishScale, smFishScale, 1);
+                Fish.transform.parent = gameObject.transform;
+            }
+            if (fishSize >= 25 && fishSize <= 28)
+            {
+                GameObject Fish = Instantiate(Octo_Prefab, spawnPoint, Quaternion.identity);
+                Fish.GetComponent<Fish_Behaviour>().Value = lgFishVal;
+                Fish.GetComponent<Fish_Behaviour>().speed = -lgFishSpeed;
+                Fish.transform.localScale = new Vector3(medFishScale, medFishScale, 1);
+                Fish.transform.parent = gameObject.transform;
+            }
+            if (fishSize == 29)
+            {
+                GameObject Fish = Instantiate(Tri_Prefab, spawnPoint, Quaternion.identity);
+                Fish.GetComponent<Fish_Behaviour>().Value = lgFishVal;
+                Fish.GetComponent<Fish_Behaviour>().speed = -lgFishSpeed;
+                Fish.transform.localScale = new Vector3(smFishScale, smFishScale, 1);
+                Fish.transform.parent = gameObject.transform;
+            }
+            yield return new WaitForSeconds (spawnTime);
 			}
 
 	

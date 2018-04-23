@@ -1,21 +1,21 @@
 fileFormatVersion: 2
-guid: dfc6d0c28e5c35646a9df91e7a701429
-timeCreated: 1524505331
+guid: b20ddefe352770f449e11f28fba356b8
+timeCreated: 1524519576
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Triangulon_0
-    21300002: Triangulon_1
-    21300004: Triangulon_2
-    21300006: Triangulon_3
-    21300008: Triangulon_4
-    21300010: Triangulon_5
-    21300012: Triangulon_6
-    21300014: Triangulon_7
-    21300016: Triangulon_8
-    21300018: Triangulon_9
-    21300020: Triangulon_10
-    21300022: Triangulon_11
+    21300000: Octopus_0
+    21300002: Octopus_1
+    21300004: Octopus_2
+    21300006: Octopus_3
+    21300008: Octopus_4
+    21300010: Octopus_5
+    21300012: Octopus_6
+    21300014: Octopus_7
+    21300016: Octopus_8
+    21300018: Octopus_9
+    21300020: Octopus_10
+    21300022: Octopus_11
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -73,7 +73,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -83,7 +83,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -93,7 +93,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -103,7 +103,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Triangulon_0
+      name: Octopus_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 322
-        width: 45
-        height: 59
+        x: 0
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,13 +127,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Triangulon_1
+      name: Octopus_1
       rect:
         serializedVersion: 2
-        x: 75
-        y: 322
-        width: 45
-        height: 59
+        x: 64
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,13 +141,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Triangulon_2
+      name: Octopus_2
       rect:
         serializedVersion: 2
-        x: 11
-        y: 260
-        width: 45
-        height: 57
+        x: 128
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,13 +155,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Triangulon_3
+      name: Octopus_3
       rect:
         serializedVersion: 2
-        x: 75
-        y: 260
-        width: 45
-        height: 57
+        x: 192
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,13 +169,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Triangulon_4
+      name: Octopus_4
       rect:
         serializedVersion: 2
-        x: 11
-        y: 196
-        width: 45
-        height: 57
+        x: 256
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,13 +183,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Triangulon_5
+      name: Octopus_5
       rect:
         serializedVersion: 2
-        x: 75
-        y: 196
-        width: 45
-        height: 57
+        x: 320
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,13 +197,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Triangulon_6
+      name: Octopus_6
       rect:
         serializedVersion: 2
-        x: 11
-        y: 130
-        width: 45
-        height: 59
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -211,13 +211,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Triangulon_7
+      name: Octopus_7
       rect:
         serializedVersion: 2
-        x: 75
-        y: 130
-        width: 45
-        height: 59
+        x: 64
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -225,13 +225,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Triangulon_8
+      name: Octopus_8
       rect:
         serializedVersion: 2
-        x: 11
-        y: 67
-        width: 45
-        height: 58
+        x: 128
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,13 +239,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Triangulon_9
+      name: Octopus_9
       rect:
         serializedVersion: 2
-        x: 75
-        y: 67
-        width: 45
-        height: 58
+        x: 192
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -253,13 +253,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Triangulon_10
+      name: Octopus_10
       rect:
         serializedVersion: 2
-        x: 11
-        y: 2
-        width: 45
-        height: 59
+        x: 256
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -267,13 +267,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Triangulon_11
+      name: Octopus_11
       rect:
         serializedVersion: 2
-        x: 75
-        y: 2
-        width: 45
-        height: 59
+        x: 320
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
