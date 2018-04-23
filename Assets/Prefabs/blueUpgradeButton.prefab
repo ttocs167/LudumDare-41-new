@@ -171,8 +171,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f116d533e1112a4a876bf5b6d4220d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerType: 
-  price: -2
+  towerType: BlueTower
+  price: 400
+  textbox: {fileID: 114510315061945402}
 --- !u!222 &222391232965334822
 CanvasRenderer:
   m_ObjectHideFlags: 1

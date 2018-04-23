@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 114937194853335258}
   m_Layer: 0
   m_Name: towerSquid
-  m_TagString: Tower
+  m_TagString: SquidTower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,6 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rend: {fileID: 0}
+  gameManagerGO: {fileID: 0}
   range: 3
   damage: 1
   rateOfFire: 2
@@ -110,6 +111,7 @@ MonoBehaviour:
   health: 6
   towerType: Type2
   spread: 1
+  shotCount: 0
 --- !u!212 &212325827282127914
 SpriteRenderer:
   m_ObjectHideFlags: 1

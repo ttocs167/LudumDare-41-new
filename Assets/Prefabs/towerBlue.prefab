@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114288203554807560}
   m_Layer: 0
   m_Name: towerBlue
-  m_TagString: blueTower
+  m_TagString: BlueTower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93,6 +93,7 @@ MonoBehaviour:
   health: 3
   towerType: Type1
   spread: 0
+  shotCount: 0
 --- !u!212 &212507422936708688
 SpriteRenderer:
   m_ObjectHideFlags: 1
