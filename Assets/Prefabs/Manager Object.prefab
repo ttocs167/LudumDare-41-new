@@ -330,6 +330,7 @@ MonoBehaviour:
   height: 6
   spawnArea: {fileID: 0}
   enemyType: {fileID: 1039440989038814, guid: 43de4916b7b86594db9f9164373ab434, type: 2}
+  bossType: {fileID: 1679556256449954, guid: fc5a0f91fbddea04abfd773cfbfa4b62, type: 2}
   buildManagerGO: {fileID: 0}
   maxBuildTime: 30
   timer: {fileID: 0}
@@ -344,6 +345,7 @@ MonoBehaviour:
   fishingMusic1: {fileID: 8300000, guid: b401e922a6bd3b64a925547500bb2773, type: 3}
   fishingMusic2: {fileID: 8300000, guid: e219fabdc3aa4c246a7c3d30d14093d3, type: 3}
   rainSFX: {fileID: 8300000, guid: c1ebf49d4469ff546be631024ad23204, type: 3}
+  bossFrequency: 5
 --- !u!114 &114842720678976688
 MonoBehaviour:
   m_ObjectHideFlags: 1

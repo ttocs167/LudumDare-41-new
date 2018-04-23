@@ -38,6 +38,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4454097371931212}
   - component: {fileID: 212814422509378848}
+  - component: {fileID: 60822802060765994}
   m_Layer: 0
   m_Name: fishtower_Blue_0
   m_TagString: Untagged
@@ -65,13 +66,50 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1452199705445866}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.03702, y: -1.4702218, z: 1}
+  m_LocalPosition: {x: -16.066101, y: 0.5550985, z: 1}
   m_LocalScale: {x: 0.01, y: 0.01, z: 1}
   m_Children:
   - {fileID: 4454097371931212}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &60822802060765994
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1526890898724348}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.05263844, y: 0.14009286}
+      - {x: -0.011586811, y: 0.1642806}
+      - {x: -0.11636573, y: 0.05953978}
+      - {x: -0.16741744, y: -0.02101392}
+      - {x: -0.11798971, y: 0.008912391}
+      - {x: -0.0969195, y: -0.031662006}
+      - {x: -0.0070124613, y: -0.16223401}
+      - {x: -0.045388557, y: -0.28739807}
+      - {x: 0.10378311, y: -0.29581198}
+      - {x: 0.029134441, y: -0.07429886}
+      - {x: 0.17150998, y: -0.013657861}
+      - {x: 0.1805724, y: -0.012084935}
+      - {x: 0.1268823, y: 0.045333244}
 --- !u!114 &114230131792267438
 MonoBehaviour:
   m_ObjectHideFlags: 1
