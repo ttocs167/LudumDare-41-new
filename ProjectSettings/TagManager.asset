@@ -13,6 +13,10 @@ TagManager:
   - PlayerSprite
   - BlueTower
   - SquidTower
+  - blueTower
+  - Tower
+  - FishSpawner
+  - Hook
   layers:
   - Default
   - TransparentFX
