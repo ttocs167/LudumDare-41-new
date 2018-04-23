@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 58826781674909162}
   - component: {fileID: 114228718022945974}
   m_Layer: 0
-  m_Name: enemyBear
+  m_Name: enemyBear 1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
