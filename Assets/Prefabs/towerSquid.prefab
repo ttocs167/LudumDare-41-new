@@ -107,7 +107,7 @@ MonoBehaviour:
   bulletType: {fileID: 1680143637391280, guid: c0b32c062f9abc04dab5ef9eb12b04d9, type: 2}
   bulletSpeed: 600
   rangeTime: 0.5
-  health: 2
+  health: 5
   towerType: Type2
   spread: 1
 --- !u!212 &212325827282127914

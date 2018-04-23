@@ -132,7 +132,10 @@ public class phaseManager : MonoBehaviour
             }
             currentState = "BUILD";
             buildTime = maxBuildTime;
-            enemyCount += Random.Range(1, 3);
+            
+            enemyCount += Random.Range(1, 4);
+            Debug.Log("number of enemies this wave" + enemyCount);
+            
         }
         timer.text = ("FIGHT OR FISH!");
     }

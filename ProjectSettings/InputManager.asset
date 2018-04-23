@@ -87,7 +87,7 @@ InputManager:
     joyNum: 0
   - serializedVersion: 3
     m_Name: Jump
-    descriptiveName: 
+    descriptiveName: Interact, skip to combat and fish
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: space

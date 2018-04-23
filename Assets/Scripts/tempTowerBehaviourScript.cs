@@ -83,7 +83,7 @@ public class tempTowerBehaviourScript : MonoBehaviour {
             manager.transform.gameObject.GetComponent<BuildingManagerScript>().locationListx.Add(posx);
             manager.transform.gameObject.GetComponent<BuildingManagerScript>().locationListy.Add(posy);
             manager.transform.gameObject.GetComponent<BuildingManagerScript>().towerCount += (int) 1;
-            Debug.Log("mouse clicked: meant to place tower");
+            // Debug.Log("mouse clicked: meant to place tower");
             spawnTime = Time.time;
 
             overlap = false;
