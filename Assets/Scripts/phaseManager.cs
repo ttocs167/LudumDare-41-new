@@ -24,6 +24,8 @@ public class phaseManager : MonoBehaviour
     public float maxBuildTime;
     public Text timer;
     public Text waveCount;
+    public GameObject pauseScreen;
+    public GameObject UI;
 
     public bool FishSpawning;
     //SetDay Night
@@ -71,6 +73,13 @@ public class phaseManager : MonoBehaviour
                 rainParticles.SetActive(true);
             }
             currentState = "SPAWN";
+        }
+        if (Input.GetButtonDown("Cancel"))
+        {
+            Time.timeScale = 0;
+            UI.SetActive(false);
+            pauseScreen.SetActive(true);
+
         }
     }
     // Update is called once per frame
