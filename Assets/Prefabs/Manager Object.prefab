@@ -142,6 +142,8 @@ MonoBehaviour:
   maxBuildTime: 5
   timer: {fileID: 0}
   waveCount: {fileID: 0}
+  pauseScreen: {fileID: 0}
+  UI: {fileID: 0}
   FishSpawning: 0
   setDayNightGO: {fileID: 0}
   rainParticles: {fileID: 0}
