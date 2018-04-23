@@ -74,6 +74,7 @@ GameObject:
   - component: {fileID: 50979349877334248}
   - component: {fileID: 114987716144490972}
   - component: {fileID: 58949881470811506}
+  - component: {fileID: 114761407851067116}
   m_Layer: 0
   m_Name: player 1
   m_TagString: Player
@@ -88,7 +89,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1055958910631484}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.001, y: 0.636, z: 0}
+  m_LocalPosition: {x: 0.001, y: 0.37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4840076891618074}
@@ -222,6 +223,20 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114761407851067116
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1661846343346520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e274417537ea7ed4aa076ec584d7acb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: {x: 10, y: -30}
+  slider: {fileID: 0}
+  character: {fileID: 0}
 --- !u!114 &114987716144490972
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -236,6 +251,7 @@ MonoBehaviour:
   moveSpeed: 125
   maxSpeed: 10
   health: 5
+  maxHealth: 0
   Hook_prefab: {fileID: 0}
   FishSpawner: {fileID: 0}
   HookSpeed: 5
