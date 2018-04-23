@@ -8,6 +8,10 @@ TextureImporter:
     21300002: GrassTile-64x64_1
     21300004: GrassTile-64x64_2
     21300006: GrassTile-64x64_3
+    21300008: GrassTile-64x64_4
+    21300010: GrassTile-64x64_5
+    21300012: GrassTile-64x64_6
+    21300014: GrassTile-64x64_7
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -109,7 +113,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 768
+        y: 1792
         width: 256
         height: 256
       alignment: 0
@@ -123,7 +127,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 512
+        y: 1536
         width: 256
         height: 256
       alignment: 0
@@ -137,7 +141,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 256
+        y: 1280
         width: 256
         height: 256
       alignment: 0
@@ -148,6 +152,62 @@ TextureImporter:
       tessellationDetail: 0
     - serializedVersion: 2
       name: GrassTile-64x64_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GrassTile-64x64_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GrassTile-64x64_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GrassTile-64x64_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GrassTile-64x64_7
       rect:
         serializedVersion: 2
         x: 0
