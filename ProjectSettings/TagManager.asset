@@ -13,14 +13,8 @@ TagManager:
   - PlayerSprite
   - BlueTower
   - SquidTower
-<<<<<<< HEAD
   - Tower
   - blueTower
-=======
-  - blueTower
-  - Tower
-  - FishSpawner
->>>>>>> 6712f4bc390298f97823fd97028ed7d2aecdad54
   - Hook
   layers:
   - Default

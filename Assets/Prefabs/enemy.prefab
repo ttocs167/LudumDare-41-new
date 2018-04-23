@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 50912442479380456}
   - component: {fileID: 114356607723301218}
   - component: {fileID: 58064037926460718}
-  - component: {fileID: 114920412735095778}
   m_Layer: 0
   m_Name: enemy
   m_TagString: Enemy
@@ -145,22 +144,6 @@ MonoBehaviour:
   health: 2
   attackRate: 1
   chanceToTargetPlayer: 0.5
---- !u!114 &114920412735095778
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1039440989038814}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffa89d02e5eba7340819a69e84cdf744, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  offsetText: {x: 0, y: 0}
-  offset: {x: 0, y: 0}
-  gs: {fileID: 11400000, guid: 1963045025331564ebdde1e5951f87e1, type: 2}
-  maxHealthSize: {x: 20, y: 5}
-  healthSize: {x: 20, y: 5}
 --- !u!212 &212525277715328444
 SpriteRenderer:
   m_ObjectHideFlags: 1

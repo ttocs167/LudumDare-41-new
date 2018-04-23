@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 50979349877334248}
   - component: {fileID: 114987716144490972}
   - component: {fileID: 58949881470811506}
-  - component: {fileID: 114758781903499960}
+  - component: {fileID: 114761407851067116}
   m_Layer: 0
   m_Name: player 1
   m_TagString: Player
@@ -223,7 +223,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114758781903499960
+--- !u!114 &114761407851067116
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -231,14 +231,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1661846343346520}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffa89d02e5eba7340819a69e84cdf744, type: 3}
+  m_Script: {fileID: 11500000, guid: e274417537ea7ed4aa076ec584d7acb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offsetText: {x: 10, y: 20}
-  offset: {x: 0, y: -20}
-  gs: {fileID: 11400000, guid: 1963045025331564ebdde1e5951f87e1, type: 2}
-  maxHealthSize: {x: 20, y: 5}
-  healthSize: {x: 20, y: 5}
+  offset: {x: 10, y: -30}
+  slider: {fileID: 0}
+  character: {fileID: 0}
 --- !u!114 &114987716144490972
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -253,7 +251,7 @@ MonoBehaviour:
   moveSpeed: 125
   maxSpeed: 10
   health: 5
-  maxHealth: 5
+  maxHealth: 0
   Hook_prefab: {fileID: 0}
   FishSpawner: {fileID: 0}
   HookSpeed: 5
