@@ -18,6 +18,7 @@ public class towerBehaviour : MonoBehaviour
     public string towerType;
     [Range(0f, 10f)]
     public float spread;
+    public int shotCount;
 
     private GameObject[] targets;
     private GameObject target;
@@ -26,6 +27,7 @@ public class towerBehaviour : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        shotCount = 5;
         rend = GetComponent<Renderer>();
         radius = rend.bounds.extents.magnitude/2.5f;
         changeScale();
@@ -105,7 +107,7 @@ public class towerBehaviour : MonoBehaviour
                     }
                     if (towerType == "Type2")
                     {
-                        for (int i = 0; i < 5; i++)
+                        for (int i = 0; i < shotCount; i++)
                         {
                             GameObject bullet = (GameObject)Instantiate(bulletType, transform.position, transform.rotation);
                             lookDirection = new Vector2(lookDirection.x + Random.Range(-(i * spread / 10f), (i * spread / 10f)), lookDirection.y + Random.Range(-(i * spread / 10f), (i * spread / 10f)));

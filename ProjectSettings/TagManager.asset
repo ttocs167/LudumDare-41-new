@@ -7,11 +7,12 @@ TagManager:
   - Enemy
   - Fish
   - PlayerFeet
-  - Tower
   - ManagerObject
   - GoldDisplay
   - Rod
   - PlayerSprite
+  - BlueTower
+  - SquidTower
   layers:
   - Default
   - TransparentFX

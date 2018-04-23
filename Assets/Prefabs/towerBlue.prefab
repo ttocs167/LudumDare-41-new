@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114288203554807560}
   m_Layer: 0
   m_Name: towerBlue
-  m_TagString: Tower
+  m_TagString: blueTower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +83,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rend: {fileID: 0}
+  gameManagerGO: {fileID: 0}
   range: 5
   damage: 1
   rateOfFire: 1

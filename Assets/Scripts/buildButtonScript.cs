@@ -29,6 +29,7 @@ public class buildButtonScript : MonoBehaviour
             // Debug.Log("Button Clicked: meant to spawn tower");
             GameObject tower = (GameObject)Instantiate(towerType, player.transform.position, transform.rotation);
         }
+        else { }
     }
 
 
