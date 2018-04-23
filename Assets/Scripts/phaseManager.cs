@@ -105,7 +105,7 @@ public class phaseManager : MonoBehaviour
         FishSpawning = false;
         if(waveCounter==0)
         {
-            timer.text = ("BUILD A TOWER TO BEGIN SUMMON THE HORDE!");
+            timer.text = ("BUILD A TOWER TO SUMMON THE HORDE!");
             // do build mode things
 
             if (turretCounter > 0)
@@ -126,7 +126,7 @@ public class phaseManager : MonoBehaviour
         else
         {
             buildTime -= Time.deltaTime;
-            timer.text = ("BUILD TIME LEFT: " + Mathf.Floor(buildTime));
+            timer.text = ("BUILD TIME LEFT: " + Mathf.Floor(buildTime) + "\n PRESS SPACE TO SUMMON THE HORDE!");
             // do build mode things
 
             if (buildTime < 0)
@@ -177,7 +177,7 @@ public class phaseManager : MonoBehaviour
             buildTime = maxBuildTime;
             
             enemyCount += Random.Range(1, 4);
-            Debug.Log("number of enemies this wave" + enemyCount);
+            Debug.Log("number of enemies this wave: " + enemyCount);
             
         }
         timer.text = ("FIGHT OR FISH!");
