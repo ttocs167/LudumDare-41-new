@@ -146,7 +146,7 @@ MonoBehaviour:
   medFishScale: 4
   lgFishVal: 25
   lgFishSpeed: 450
-  lgFishScale: 6
+  lgFishScale: 10
 --- !u!212 &212190420509740646
 SpriteRenderer:
   m_ObjectHideFlags: 1

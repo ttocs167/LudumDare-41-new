@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class BuildingManagerScript : MonoBehaviour {
     public List<int> locationListx;
     public List<int> locationListy;
+    public int towerCount = 0;
     public int currentMoney;
     public Text Gold;
 

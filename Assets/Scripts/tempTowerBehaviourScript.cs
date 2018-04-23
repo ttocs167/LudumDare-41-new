@@ -65,12 +65,12 @@ public class tempTowerBehaviourScript : MonoBehaviour {
         cursorPos.z = 1;
         transform.position = cursorPos;
 
-        posx = (int)cursorPos.x;
-        posy = (int)cursorPos.y;
+        posx = (int) Mathf.Floor(cursorPos.x);
+        posy = (int) Mathf.Floor(cursorPos.y);
 
         for (int i = 0; i < manager.transform.gameObject.GetComponent<BuildingManagerScript>().locationListx.Count; i++)
         {
-            if (posx == manager.transform.gameObject.GetComponent<BuildingManagerScript>().locationListx[i] & posy == manager.transform.gameObject.GetComponent<BuildingManagerScript>().locationListy[i])
+            if (posx == manager.transform.gameObject.GetComponent<BuildingManagerScript>().locationListx[i] && posy == manager.transform.gameObject.GetComponent<BuildingManagerScript>().locationListy[i])
             {
                 overlap = true;
             }
@@ -82,6 +82,7 @@ public class tempTowerBehaviourScript : MonoBehaviour {
             manager.transform.gameObject.GetComponent<BuildingManagerScript>().currentMoney -= price;
             manager.transform.gameObject.GetComponent<BuildingManagerScript>().locationListx.Add(posx);
             manager.transform.gameObject.GetComponent<BuildingManagerScript>().locationListy.Add(posy);
+            manager.transform.gameObject.GetComponent<BuildingManagerScript>().towerCount += (int) 1;
             Debug.Log("mouse clicked: meant to place tower");
             spawnTime = Time.time;
 

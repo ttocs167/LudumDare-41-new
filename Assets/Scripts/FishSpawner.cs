@@ -38,23 +38,27 @@ public class FishSpawner : MonoBehaviour {
 		yield return new WaitForSeconds (startWait);
 			for (int i = 0; i < fishCount; i++) {		
 				Vector2 spawnPoint = new Vector2 (Random.Range (leftEdge, rightEdge), transform.position.y);
-				int fishSize = Random.Range (1, 3);						
+				int fishSize = Random.Range (1, 10);						
 				GameObject Fish = Instantiate (Fish_Prefab, spawnPoint, Quaternion.identity);
-			if (fishSize == 1) {
+                
+			if (fishSize < 5) {
 				Fish.GetComponent<Fish_Behaviour>().Value = smFishVal;
 				Fish.GetComponent<Fish_Behaviour>().speed = -smFishSpeed;
 				Fish.transform.localScale = new Vector3 (smFishScale, smFishScale, 1);
+                
 			}	
-			if (fishSize == 2) {
+			if (fishSize >= 6 && fishSize <= 8) {
 				Fish.GetComponent<Fish_Behaviour>().Value = medFishVal;
 				Fish.GetComponent<Fish_Behaviour>().speed = -medFishSpeed;
 				Fish.transform.localScale = new Vector3 (medFishScale, medFishScale, 1);
-			}
-			if (fishSize == 3) {
+                
+            }
+			if (fishSize == 9) {
 				Fish.GetComponent<Fish_Behaviour>().Value = lgFishVal;
 				Fish.GetComponent<Fish_Behaviour>().speed = -lgFishSpeed;
 				Fish.transform.localScale = new Vector3 (lgFishScale, lgFishScale, 1);
-			}	
+                
+            }	
 							
 				
 				Fish.transform.parent = gameObject.transform;
