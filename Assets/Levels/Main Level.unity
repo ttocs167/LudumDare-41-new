@@ -868,6 +868,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 114949781378374998, guid: 86b9a79d3f3dc4c4ab8c3e608f4dbd75,
+        type: 2}
+      propertyPath: Gold
+      value: 
+      objectReference: {fileID: 705233252}
     - target: {fileID: 114005627707907778, guid: 86b9a79d3f3dc4c4ab8c3e608f4dbd75,
         type: 2}
       propertyPath: spawnArea
@@ -883,15 +888,6 @@ Prefab:
       propertyPath: waveCount
       value: 
       objectReference: {fileID: 915142840}
-    - target: {fileID: 1348865286863256, guid: 86b9a79d3f3dc4c4ab8c3e608f4dbd75, type: 2}
-      propertyPath: m_TagString
-      value: ManagerObject
-      objectReference: {fileID: 0}
-    - target: {fileID: 114949781378374998, guid: 86b9a79d3f3dc4c4ab8c3e608f4dbd75,
-        type: 2}
-      propertyPath: Gold
-      value: 
-      objectReference: {fileID: 705233252}
     - target: {fileID: 114005627707907778, guid: 86b9a79d3f3dc4c4ab8c3e608f4dbd75,
         type: 2}
       propertyPath: setDayNightGO
@@ -902,21 +898,6 @@ Prefab:
       propertyPath: rainParticles
       value: 
       objectReference: {fileID: 1324104050}
-    - target: {fileID: 114005627707907778, guid: 86b9a79d3f3dc4c4ab8c3e608f4dbd75,
-        type: 2}
-      propertyPath: maxBuildTime
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114005627707907778, guid: 86b9a79d3f3dc4c4ab8c3e608f4dbd75,
-        type: 2}
-      propertyPath: width
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114949781378374998, guid: 86b9a79d3f3dc4c4ab8c3e608f4dbd75,
-        type: 2}
-      propertyPath: currentMoney
-      value: 250
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 86b9a79d3f3dc4c4ab8c3e608f4dbd75, type: 2}
   m_IsPrefabParent: 0

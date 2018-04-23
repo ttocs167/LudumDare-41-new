@@ -14,11 +14,13 @@ public class phaseManager : MonoBehaviour
     private float buildTime;
     private GameObject[] enemiesArray;
     //List<GameObject> enemiesList = new List<GameObject>();
-
+    private int turretCounter = 0;
     public float width = 1f;
     public float height = 1f;
     public GameObject spawnArea;
     public GameObject enemyType;
+    public GameObject buildManagerGO;
+    private BuildingManagerScript buildManager;
     public float maxBuildTime;
     public Text timer;
     public Text waveCount;
@@ -43,7 +45,11 @@ public class phaseManager : MonoBehaviour
         buildTime = maxBuildTime;
         timer.text = ("" + maxBuildTime);
         FishSpawner = GameObject.Find("FishSpawner");
-
+        buildManagerGO= this.gameObject;
+        if(buildManagerGO!=null)
+        {
+            buildManager = buildManagerGO.GetComponent<BuildingManagerScript>();
+        }
         if (setDayNightGO != null)
         {
             setDayNight = setDayNightGO.GetComponent<SetDayNight>();
@@ -52,15 +58,28 @@ public class phaseManager : MonoBehaviour
         //Initializes BG music.
         bgmAudioInit();
     }
-
+    void Update()
+    {
+        if (currentState == "BUILD" && Input.GetButtonDown("Jump")&&(waveCounter>0))
+        {
+            if (setDayNight != null)
+            {
+                setDayNight.StartNight();
+            }
+            if (rainParticles != null)
+            {
+                rainParticles.SetActive(true);
+            }
+            currentState = "SPAWN";
+        }
+    }
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (currentState == "BUILD" && Input.GetButtonDown("Jump"))
+        if(buildManager!=null)
         {
-            currentState = "SPAWN";
-        }
-
+            turretCounter = buildManager.towerCount;
+        }        
         //Debug.Log("Current State = " + currentState);
         enemiesArray = GameObject.FindGameObjectsWithTag("Enemy");
 
@@ -84,24 +103,48 @@ public class phaseManager : MonoBehaviour
     {
         FishSpawner.GetComponent<FishSpawner>().Stop();
         FishSpawning = false;
-        buildTime -= Time.deltaTime;
-        timer.text = ("BUILD TIME LEFT: " + Mathf.Floor(buildTime));
-        // do build mode things
-
-        if (buildTime < 0)
+        if(waveCounter==0)
         {
-            if (setDayNight != null)
+            timer.text = ("BUILD A TOWER TO BEGIN SUMMON THE HORDE!");
+            // do build mode things
+
+            if (turretCounter > 0)
             {
-                setDayNight.StartNight();
+                if (setDayNight != null)
+                {
+                    setDayNight.StartNight();
+                }
+                if (rainParticles != null)
+                {
+                    rainParticles.SetActive(true);
+                }
+                currentState = "SPAWN";
+                waveCounter++;
+                waveCount.text = ("Wave: " + waveCounter);
             }
-            if(rainParticles!=null)
-            {
-                rainParticles.SetActive(true);
-            }
-            currentState = "SPAWN";
-            waveCounter++;
-            waveCount.text = ("Wave: " + waveCounter);
         }
+        else
+        {
+            buildTime -= Time.deltaTime;
+            timer.text = ("BUILD TIME LEFT: " + Mathf.Floor(buildTime));
+            // do build mode things
+
+            if (buildTime < 0)
+            {
+                if (setDayNight != null)
+                {
+                    setDayNight.StartNight();
+                }
+                if (rainParticles != null)
+                {
+                    rainParticles.SetActive(true);
+                }
+                currentState = "SPAWN";
+                waveCounter++;
+                waveCount.text = ("Wave: " + waveCounter);
+            }
+        }
+        
     }
 
     void spawnState()

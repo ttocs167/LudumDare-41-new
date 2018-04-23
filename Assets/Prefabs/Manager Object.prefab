@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 82044961475292582}
   m_Layer: 0
   m_Name: Manager Object
-  m_TagString: Untagged
+  m_TagString: ManagerObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1348865286863256}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.0819607, y: -0.8362138, z: -9.891619}
+  m_LocalPosition: {x: -1.887416, y: 0.24006476, z: -9.891619}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -134,14 +134,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 
-  width: 1
+  width: 5
   height: 6
   spawnArea: {fileID: 0}
   enemyType: {fileID: 1039440989038814, guid: 43de4916b7b86594db9f9164373ab434, type: 2}
-  maxBuildTime: 30
-  timer: {fileID: 114438738065914702, guid: f662490b135a4af43a08224a1f6f3eb2, type: 2}
-  waveCount: {fileID: 114667024277757810, guid: a11c62d6f338ed04c8606462ee6c8611,
-    type: 2}
+  buildManagerGO: {fileID: 0}
+  maxBuildTime: 5
+  timer: {fileID: 0}
+  waveCount: {fileID: 0}
   FishSpawning: 0
   setDayNightGO: {fileID: 0}
   rainParticles: {fileID: 0}
@@ -161,5 +161,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   locationListx: 
   locationListy: 
+  towerCount: 0
   currentMoney: 250
-  Gold: {fileID: 114799333857124226, guid: 71d6dbf835c30a6429f5ee111132ff52, type: 2}
+  Gold: {fileID: 0}
