@@ -6,7 +6,8 @@ public class towerBehaviour : MonoBehaviour
 {
     public Renderer rend;
     private bool isShaderOn = false;
-
+    public GameObject gameManagerGO;
+    private BuildingManagerScript buildManager;
     public float range = 20;
     public float damage;
     public float rateOfFire;
@@ -28,8 +29,19 @@ public class towerBehaviour : MonoBehaviour
         rend = GetComponent<Renderer>();
         radius = rend.bounds.extents.magnitude/2.5f;
         changeScale();
+        gameManagerGO = GameObject.FindGameObjectsWithTag("ManagerObject")[0];
+        if (gameManagerGO != null)
+        {
+            buildManager = gameManagerGO.GetComponent<BuildingManagerScript>();
+         }
     }
-
+    public void OnDestroy()
+    {
+        if(buildManager!=null)
+        {
+            buildManager.towerCount -= 1;
+        }
+    }
     public void changeScale()
     {
         float scale = range / radius;

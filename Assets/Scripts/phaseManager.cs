@@ -162,6 +162,7 @@ public class phaseManager : MonoBehaviour
 
     void fightState()
     {
+        
         //Debug.Log("enemiesList count = " + enemiesArray.Length);
         if (enemiesArray.Length == 0)
         {
@@ -180,7 +181,15 @@ public class phaseManager : MonoBehaviour
             Debug.Log("number of enemies this wave: " + enemyCount);
             
         }
-        timer.text = ("FIGHT OR FISH!");
+        if(turretCounter==0)
+        {
+            timer.text = ("YOU'RE SCREWED");
+        }
+        else
+        {
+            timer.text = ("FIGHT OR FISH!");
+        }
+        
     }
 
     void SpawnEnemies()
