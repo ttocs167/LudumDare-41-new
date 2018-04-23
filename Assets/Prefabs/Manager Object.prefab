@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 114005627707907778}
   - component: {fileID: 114949781378374998}
   - component: {fileID: 82044961475292582}
+  - component: {fileID: 82691296896554066}
   m_Layer: 0
   m_Name: Manager Object
   m_TagString: ManagerObject
@@ -122,6 +123,86 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!82 &82691296896554066
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1348865286863256}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &114005627707907778
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -139,7 +220,7 @@ MonoBehaviour:
   spawnArea: {fileID: 0}
   enemyType: {fileID: 1039440989038814, guid: 43de4916b7b86594db9f9164373ab434, type: 2}
   buildManagerGO: {fileID: 0}
-  maxBuildTime: 5
+  maxBuildTime: 30
   timer: {fileID: 0}
   waveCount: {fileID: 0}
   pauseScreen: {fileID: 0}
@@ -148,8 +229,10 @@ MonoBehaviour:
   setDayNightGO: {fileID: 0}
   rainParticles: {fileID: 0}
   bgmVolume: 0.1
+  bgRainVolume: 0.5
   fishingMusic1: {fileID: 8300000, guid: b401e922a6bd3b64a925547500bb2773, type: 3}
   fishingMusic2: {fileID: 8300000, guid: e219fabdc3aa4c246a7c3d30d14093d3, type: 3}
+  rainSFX: {fileID: 8300000, guid: c1ebf49d4469ff546be631024ad23204, type: 3}
 --- !u!114 &114949781378374998
 MonoBehaviour:
   m_ObjectHideFlags: 1

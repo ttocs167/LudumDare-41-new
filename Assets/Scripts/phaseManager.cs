@@ -34,10 +34,14 @@ public class phaseManager : MonoBehaviour
     public GameObject rainParticles;
     //BGM Audio
     public float bgmVolume = 0.10f;
+    public float bgRainVolume = 0.50f;
     private bool bgPlay = false;
-    AudioSource bgMusic;
+    AudioSource bgMusic;    
+    AudioSource bgRain;
     public AudioClip fishingMusic1;
     public AudioClip fishingMusic2;
+    public AudioClip rainSFX;
+
     private bool first = true;
     private GameObject FishSpawner;
     // Use this for initialization
@@ -70,6 +74,7 @@ public class phaseManager : MonoBehaviour
             }
             if (rainParticles != null)
             {
+                StartCoroutine(bgmFadeIn(bgRain, 3f, bgRainVolume));
                 rainParticles.SetActive(true);
             }
             currentState = "SPAWN";
@@ -136,6 +141,7 @@ public class phaseManager : MonoBehaviour
                 }
                 if (rainParticles != null)
                 {
+                    StartCoroutine(bgmFadeIn(bgRain, 3f, bgRainVolume));
                     rainParticles.SetActive(true);
                 }
                 currentState = "SPAWN";
@@ -171,6 +177,7 @@ public class phaseManager : MonoBehaviour
             }
             if (rainParticles != null)
             {
+                StartCoroutine(bgmFadeOut(bgRain, 3f));
                 rainParticles.SetActive(false);
             }
             currentState = "BUILD";
@@ -209,13 +216,16 @@ public class phaseManager : MonoBehaviour
     //BGM Audio Manager Section
     void bgmAudioInit()
     {
-        bgMusic = GetComponent<AudioSource>();
+        AudioSource[] audioSources = GetComponents<AudioSource>();
+        bgMusic = audioSources[0];
+        bgRain = audioSources[1];
         setBgSong(fishingMusic2);
-        StartCoroutine(bgmFadeIn(bgMusic, 5f));
+        bgRain.clip = rainSFX;
+        StartCoroutine(bgmFadeIn(bgMusic, 5f, bgmVolume));
     }
 
     //Fade in/out co-routines
-    public IEnumerator bgmFadeIn(AudioSource audioSource, float FadeTime)
+    public IEnumerator bgmFadeIn(AudioSource audioSource, float FadeTime, float MaxVolume)
     {
         Debug.Log("Fade In Started!");
 
@@ -223,9 +233,9 @@ public class phaseManager : MonoBehaviour
         audioSource.loop = true;
         audioSource.Play();
 
-        while (audioSource.volume < bgmVolume)
+        while (audioSource.volume < MaxVolume)
         {
-            audioSource.volume += bgmVolume * Time.deltaTime / FadeTime;
+            audioSource.volume += MaxVolume * Time.deltaTime / FadeTime;
 
             yield return null;
         }
@@ -245,7 +255,6 @@ public class phaseManager : MonoBehaviour
         }
 
         audioSource.Stop();
-        audioSource.volume = startVolume;
     }
 
     void setBgSong(AudioClip bgmClip)
