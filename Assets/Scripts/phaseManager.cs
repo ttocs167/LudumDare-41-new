@@ -19,6 +19,7 @@ public class phaseManager : MonoBehaviour
     public float height = 1f;
     public GameObject spawnArea;
     public GameObject enemyType;
+    public GameObject bossType;
     public GameObject buildManagerGO;
     private BuildingManagerScript buildManager;
     public float maxBuildTime;
@@ -44,6 +45,7 @@ public class phaseManager : MonoBehaviour
 
     private bool first = true;
     private GameObject FishSpawner;
+    public int bossFrequency = 5;
     // Use this for initialization
     void Start()
     {
@@ -78,6 +80,16 @@ public class phaseManager : MonoBehaviour
                 rainParticles.SetActive(true);
             }
             currentState = "SPAWN";
+            waveCounter++;
+            if (waveCounter % 5 == 0)
+            {
+                waveCount.text = ("Boss Wave");
+            }
+            else
+            {
+                waveCount.text = ("Wave: " + waveCounter);
+
+            }
         }
         if (Input.GetButtonDown("Cancel"))
         {
@@ -146,8 +158,16 @@ public class phaseManager : MonoBehaviour
                 }
                 currentState = "SPAWN";
                 waveCounter++;
-                waveCount.text = ("Wave: " + waveCounter);
-            }
+                if (waveCounter % 5 == 0)
+                {
+                    waveCount.text = ("Boss Wave");
+                }
+                else
+                {
+                    waveCount.text = ("Wave: " + waveCounter);
+
+                }
+             }
         }
         
     }
@@ -155,12 +175,20 @@ public class phaseManager : MonoBehaviour
     void spawnState()
     {
         currentState = "FIGHT";
-
+        Debug.Log(waveCounter);
         if (enemiesArray.Length == 0)
         {
             for (int i = 0; i < enemyCount; i++)
             {
-                Invoke("SpawnEnemies", 0f);
+                if(waveCounter%5==0&&waveCounter!=0)
+                {                 
+                    
+                    Invoke("SpawnBoss", 0f);
+                }
+                else
+                {
+                    Invoke("SpawnEnemies", 0f);
+                }                
             }
         }
     }
@@ -197,7 +225,20 @@ public class phaseManager : MonoBehaviour
         }
         
     }
+    void SpawnBoss()
+    {
+        float xPos = Random.Range(spawnArea.transform.position.x - width, spawnArea.transform.position.x + width);
+        float yPos = Random.Range(spawnArea.transform.position.y - height, spawnArea.transform.position.y + height);
+        Vector2 spawnLocation = new Vector2(xPos, yPos);
+        GameObject enemy = (GameObject)Instantiate(bossType, spawnLocation, transform.rotation);
+        if (!FishSpawning)
+        {
+            FishSpawner.GetComponent<FishSpawner>().StartCoroutine("addFish");
+            FishSpawning = true;
+        }
 
+
+    }
     void SpawnEnemies()
     {
         float xPos = Random.Range(spawnArea.transform.position.x - width, spawnArea.transform.position.x + width);
