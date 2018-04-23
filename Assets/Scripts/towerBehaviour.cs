@@ -24,9 +24,12 @@ public class towerBehaviour : MonoBehaviour
     private GameObject target;
     private float nextFire = 0f;
     private float radius = 1f;
+    private RobertHealthFollow RHF;
+    private int maxHealth;
     // Use this for initialization
     void Start()
     {
+        maxHealth = health;
         shotCount = 5;
         rend = GetComponent<Renderer>();
         radius = rend.bounds.extents.magnitude/2.5f;
@@ -36,7 +39,25 @@ public class towerBehaviour : MonoBehaviour
         {
             buildManager = gameManagerGO.GetComponent<BuildingManagerScript>();
          }
+        RHFOnStart();
     }
+
+    void RHFOnStart()
+    {
+        RHF = this.GetComponent<RobertHealthFollow>();
+        if (RHF != null)
+        {
+            RHFOnHealth();
+        }
+    }
+    void RHFOnHealth()
+    {
+        if (RHF != null)
+        {
+            RHF.setHealth(health, maxHealth);
+        }
+    }
+
     public void OnDestroy()
     {
         if(buildManager!=null)
@@ -70,6 +91,11 @@ public class towerBehaviour : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (health > maxHealth)
+        {
+            maxHealth = health;
+        }
+        RHFOnHealth();
         changeScale();
         targets = GameObject.FindGameObjectsWithTag("Enemy");
         GameObject tMin = null;
