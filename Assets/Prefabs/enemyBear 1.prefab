@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 50429641236424922}
   - component: {fileID: 114658421239649858}
   - component: {fileID: 58826781674909162}
+  - component: {fileID: 114228718022945974}
   m_Layer: 0
   m_Name: enemyBear
   m_TagString: Enemy
@@ -126,6 +127,22 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114228718022945974
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1679556256449954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffa89d02e5eba7340819a69e84cdf744, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offsetText: {x: -10, y: 10}
+  offset: {x: -20, y: 20}
+  gs: {fileID: 11400000, guid: 1963045025331564ebdde1e5951f87e1, type: 2}
+  maxHealthSize: {x: 40, y: 5}
+  healthSize: {x: 20, y: 5}
 --- !u!114 &114658421239649858
 MonoBehaviour:
   m_ObjectHideFlags: 1
