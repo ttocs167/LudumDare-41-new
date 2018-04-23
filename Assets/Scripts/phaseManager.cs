@@ -40,6 +40,7 @@ public class phaseManager : MonoBehaviour
     public AudioClip fishingMusic2;
 
     private GameObject FishSpawner;
+    private bool first = true;
     // Use this for initialization
     void Start()
     {
@@ -62,7 +63,7 @@ public class phaseManager : MonoBehaviour
     }
     void Update()
     {
-        if (currentState == "BUILD" && Input.GetButtonDown("Jump")&&(waveCounter>0))
+        if (currentState == "BUILD" && Input.GetButtonDown("Jump")&&(!first))
         {
             if (setDayNight != null)
             {
@@ -112,14 +113,15 @@ public class phaseManager : MonoBehaviour
     {
         FishSpawner.GetComponent<FishSpawner>().Stop();
         FishSpawning = false;
-        if(waveCounter==0)
+        if(waveCounter==0&&first)
         {
             timer.text = ("BUILD A TOWER TO SUMMON THE HORDE!");
             // do build mode things
 
             if (turretCounter > 0)
             {
-                if (setDayNight != null)
+                first = false;
+                /*if (setDayNight != null)
                 {
                     setDayNight.StartNight();
                 }
@@ -129,8 +131,9 @@ public class phaseManager : MonoBehaviour
                 }
                 currentState = "SPAWN";
                 waveCounter++;
-                waveCount.text = ("Wave: " + waveCounter);
+                waveCount.text = ("Wave: " + waveCounter);*/
             }
+            
         }
         else
         {
