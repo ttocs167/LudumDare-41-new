@@ -12,8 +12,7 @@ public class RobertHealthFollow : MonoBehaviour {
     private float health = 0;
     public GUISkin gs;
     public Vector2 maxHealthSize = new Vector2(20, 5);
-    public Vector2 healthSize = new Vector2(20,5);   
-    
+    public Vector2 healthSize = new Vector2(20,5);    
     void Start()
     {        
         cam = Camera.main;
@@ -36,7 +35,7 @@ public class RobertHealthFollow : MonoBehaviour {
 
     void OnGUI()
     {
-        if(Camera.main.GetComponent<cameraControl>().mapOn)
+        if(Camera.main.GetComponent<cameraControl>().mapOn&&(Time.timeScale!=0))
         {
             Vector3 screenPos = cam.WorldToScreenPoint(target.position);
             int sy = Screen.height - (int)screenPos.y;

@@ -94,7 +94,7 @@ public class phaseManager : MonoBehaviour
         if (Input.GetButtonDown("Cancel"))
         {
             Time.timeScale = 0f;
-            UI.SetActive(false);
+            UI.SetActive(false);           
             pauseScreen.SetActive(true);
 
         }
