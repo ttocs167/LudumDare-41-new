@@ -12,7 +12,8 @@ public class RobertHealthFollow : MonoBehaviour {
     private float health = 0;
     public GUISkin gs;
     public Vector2 maxHealthSize = new Vector2(20, 5);
-    public Vector2 healthSize = new Vector2(20,5);    
+    public Vector2 healthSize = new Vector2(20,5);   
+    
     void Start()
     {        
         cam = Camera.main;
