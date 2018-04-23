@@ -1362,6 +1362,10 @@ Prefab:
       propertyPath: FishSpawner
       value: 
       objectReference: {fileID: 1318544831}
+    - target: {fileID: 1661846343346520, guid: d19f37ea5ae30574ca7e3ee59cb0f62e, type: 2}
+      propertyPath: m_Name
+      value: player
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: d19f37ea5ae30574ca7e3ee59cb0f62e, type: 2}
@@ -2134,6 +2138,27 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8c3ec808e28c4994aac2e9b92a4e8115, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1692933344 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1661846343346520, guid: d19f37ea5ae30574ca7e3ee59cb0f62e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1003207648}
+--- !u!114 &1692933345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1692933344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffa89d02e5eba7340819a69e84cdf744, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offsetText: {x: 0, y: 0}
+  offset: {x: 0, y: 20}
+  gs: {fileID: 0}
+  maxHealthSize: {x: 20, y: 5}
+  healthSize: {x: 20, y: 5}
 --- !u!1 &1729478721
 GameObject:
   m_ObjectHideFlags: 0

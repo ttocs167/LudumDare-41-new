@@ -18,6 +18,8 @@ public class hookUpgradeScript : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         manager = GameObject.FindGameObjectWithTag("ManagerObject");
+        hook.transform.localScale = new Vector3(2f, 2f, 2f);
+        player.transform.gameObject.GetComponent<playerBehaviour>().HookSpeed = 2.5f;
     }
 
     // Update is called once per frame
