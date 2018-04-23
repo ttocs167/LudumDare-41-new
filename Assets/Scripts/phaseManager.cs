@@ -187,7 +187,7 @@ public class phaseManager : MonoBehaviour
         }
         else
         {
-            timer.text = ("FIGHT OR FISH!");
+            timer.text = ("ZOMBOSAS INCOMING \n PRESS SPACE BY YOUR CHAIR TO FISH");
         }
         
     }
