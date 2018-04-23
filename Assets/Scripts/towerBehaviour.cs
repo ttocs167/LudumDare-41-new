@@ -64,12 +64,13 @@ public class towerBehaviour : MonoBehaviour
     }
     private void Update()
     {
+        
         changeShaderState(Camera.main.GetComponent<cameraControl>().mapOn, Camera.main.GetComponent<cameraControl>().onAlpha, Camera.main.GetComponent<cameraControl>().offAlpha);
     }
     // Update is called once per frame
     void FixedUpdate()
     {
-
+        changeScale();
         targets = GameObject.FindGameObjectsWithTag("Enemy");
         GameObject tMin = null;
         float minDist = Mathf.Infinity;

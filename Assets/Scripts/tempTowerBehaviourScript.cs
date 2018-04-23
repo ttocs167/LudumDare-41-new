@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class tempTowerBehaviourScript : MonoBehaviour {
-    
+    public Renderer rend;
     public float gridSize = 1;
     public GameObject towerType;
     public float spawnTime;
@@ -18,20 +18,26 @@ public class tempTowerBehaviourScript : MonoBehaviour {
     private bool overlap;
     private GameObject manager;
     public int price;
-
-
+    public float range = 10;
+    private float radius;
 
     // Use this for initialization
     void Start () {
+        rend = GetComponent<Renderer>();
+        radius = rend.bounds.extents.magnitude / 2.5f;
         self = this.gameObject;
         spawnTime = Time.time;
         player = GameObject.FindGameObjectWithTag("Player");
         manager = GameObject.FindGameObjectWithTag("ManagerObject");
-
+        changeScale();
 
 
     }
-
+    public void changeScale()
+    {
+        float scale = range / radius;
+        rend.material.SetFloat("_Scale", scale);
+    }
     // Update is called once per frame
     void Update()
     {
