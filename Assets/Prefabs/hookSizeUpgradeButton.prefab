@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 222532302276373614}
   - component: {fileID: 114766897098470480}
   - component: {fileID: 114034822329135618}
-  - component: {fileID: 114535242394738674}
+  - component: {fileID: 114349377898820832}
   m_Layer: 5
   m_Name: hookSizeUpgradeButton
   m_TagString: Untagged
@@ -87,8 +87,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114535242394738674}
-        m_MethodName: OnButtonPress
+      - m_Target: {fileID: 114349377898820832}
+        m_MethodName: UpgradeHookSize
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -133,21 +133,24 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 200
---- !u!114 &114535242394738674
+--- !u!114 &114349377898820832
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1002508442287940}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a23c49649568ea249ab9ccca283a81b8, type: 3}
+  m_Script: {fileID: 11500000, guid: 113dd84f74182a741b3d1d0cb1194dc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgrade: Size
-  price: 200
-  textbox: {fileID: 114120986958320056}
-  hook: {fileID: 1137643184775598, guid: ba84ddd1467ce1c458892af7cfa5f232, type: 2}
+  moveSpeed: 5
+  maxSpeed: 10
+  health: 0
+  maxHealth: 0
+  Hook_prefab: {fileID: 0}
+  FishSpawner: {fileID: 0}
+  HookSpeed: 5
 --- !u!114 &114766897098470480
 MonoBehaviour:
   m_ObjectHideFlags: 1
