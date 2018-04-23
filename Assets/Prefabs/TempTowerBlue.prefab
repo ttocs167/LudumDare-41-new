@@ -82,10 +82,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df511bcb680f23f49b1f385fc241a31b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 0}
   gridSize: 1
   towerType: {fileID: 1452199705445866, guid: 96a32f0232b89f949bcc1e46c21dc0d4, type: 2}
   spawnTime: 0
   price: 100
+  range: 5
 --- !u!212 &212340729814782716
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -100,7 +102,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: b6070c3079ae62c4d8f65114e2aee30c, type: 2}
+  - {fileID: 2100000, guid: 473fc543eb721f84da7fa4d481aa23f4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
