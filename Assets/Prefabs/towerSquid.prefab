@@ -101,12 +101,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rend: {fileID: 0}
-  range: 6
+  range: 3
   damage: 1
-  rateOfFire: 1
+  rateOfFire: 2
   bulletType: {fileID: 1680143637391280, guid: c0b32c062f9abc04dab5ef9eb12b04d9, type: 2}
   bulletSpeed: 600
-  rangeTime: 2
+  rangeTime: 0.5
   health: 2
   towerType: Type2
   spread: 1

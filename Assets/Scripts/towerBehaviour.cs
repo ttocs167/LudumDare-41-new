@@ -93,7 +93,7 @@ public class towerBehaviour : MonoBehaviour
                     }
                     if (towerType == "Type2")
                     {
-                        for (int i = 0; i < 3; i++)
+                        for (int i = 0; i < 5; i++)
                         {
                             GameObject bullet = (GameObject)Instantiate(bulletType, transform.position, transform.rotation);
                             lookDirection = new Vector2(lookDirection.x + Random.Range(-(i * spread / 10f), (i * spread / 10f)), lookDirection.y + Random.Range(-(i * spread / 10f), (i * spread / 10f)));

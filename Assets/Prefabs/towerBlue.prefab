@@ -83,7 +83,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rend: {fileID: 0}
-  range: 6
+  range: 5
   damage: 1
   rateOfFire: 1
   bulletType: {fileID: 1555386791921450, guid: c2befe0fb8472d043afc8b4fa4b4293a, type: 2}

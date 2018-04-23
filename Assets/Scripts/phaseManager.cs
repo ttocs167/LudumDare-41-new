@@ -9,7 +9,7 @@ public class phaseManager : MonoBehaviour
     //string FIGHT/BUILD/NONE
     public string currentState;
 
-    private int enemyCount = 1;
+    private int enemyCount = 5;
     private int waveCounter = 0;
     private float buildTime;
     private GameObject[] enemiesArray;
@@ -56,6 +56,11 @@ public class phaseManager : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (currentState == "BUILD" && Input.GetButtonDown("Jump"))
+        {
+            currentState = "SPAWN";
+        }
+
         //Debug.Log("Current State = " + currentState);
         enemiesArray = GameObject.FindGameObjectsWithTag("Enemy");
 
@@ -127,7 +132,7 @@ public class phaseManager : MonoBehaviour
             }
             currentState = "BUILD";
             buildTime = maxBuildTime;
-            enemyCount += 1;
+            enemyCount += Random.Range(1, 3);
         }
         timer.text = ("FIGHT OR FISH!");
     }

@@ -8,10 +8,12 @@ public class bulletBehaviour : MonoBehaviour {
     public int damage;
 
     private GameObject bullet;
+    private GameObject manager;
 
 	// Use this for initialization
 	void Start () {
         bullet = this.gameObject;
+        manager = GameObject.FindGameObjectWithTag("ManagerObject");
     }
 	
 	// Update is called once per frame
@@ -37,7 +39,7 @@ public class bulletBehaviour : MonoBehaviour {
                 GameObject deathParticle = (GameObject)Instantiate(bloodDeath, transform.position, transform.rotation);
                 Destroy(deathParticle, 0.1f);
 
-
+                manager.transform.gameObject.GetComponent<BuildingManagerScript>().currentMoney += Random.Range(1, 3);
 
             }
 

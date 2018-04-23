@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114367075011687126}
   - component: {fileID: 114055564340412526}
   m_Layer: 5
-  m_Name: buildButtonBlue
+  m_Name: buildbuttonBlue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,10 +97,10 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 56fc13a36dafb1849b7d779b1998e871,
+    m_HighlightedSprite: {fileID: 21300002, guid: 56fc13a36dafb1849b7d779b1998e871,
       type: 3}
-    m_PressedSprite: {fileID: 21300002, guid: 56fc13a36dafb1849b7d779b1998e871, type: 3}
-    m_DisabledSprite: {fileID: 21300002, guid: 56fc13a36dafb1849b7d779b1998e871, type: 3}
+    m_PressedSprite: {fileID: 21300004, guid: 56fc13a36dafb1849b7d779b1998e871, type: 3}
+    m_DisabledSprite: {fileID: 21300004, guid: 56fc13a36dafb1849b7d779b1998e871, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted

@@ -144,7 +144,7 @@ MonoBehaviour:
   medFishVal: 10
   medFishSpeed: 300
   medFishScale: 4
-  lgFishVal: 20
+  lgFishVal: 25
   lgFishSpeed: 450
   lgFishScale: 6
 --- !u!212 &212190420509740646
