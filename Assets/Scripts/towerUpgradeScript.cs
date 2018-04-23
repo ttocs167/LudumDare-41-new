@@ -18,7 +18,8 @@ public class towerUpgradeScript : MonoBehaviour {
     }
 
     public void Update()
-    {
+    {   
+        
         towers = GameObject.FindGameObjectsWithTag(towerType);
         if (towerType == "BlueTower")
         {
@@ -30,7 +31,17 @@ public class towerUpgradeScript : MonoBehaviour {
         }
 
         textbox.text = "" + price;
-        Debug.Log("" + price);
+
+        if (manager.transform.gameObject.GetComponent<phaseManager>().currentState != "BUILD")
+        {
+            gameObject.GetComponent<Button>().interactable = false;
+
+        }
+        else
+        {
+            gameObject.GetComponent<Button>().interactable = true;
+        }
+        //Debug.Log("" + price);
 
     }
 

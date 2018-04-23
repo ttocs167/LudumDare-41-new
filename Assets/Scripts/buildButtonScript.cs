@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class buildButtonScript : MonoBehaviour
 {
@@ -19,6 +20,19 @@ public class buildButtonScript : MonoBehaviour
         manager = GameObject.FindGameObjectWithTag("ManagerObject");
 
 
+    }
+
+    void Update()
+    {
+        if (manager.transform.gameObject.GetComponent<phaseManager>().currentState != "BUILD")
+        {
+            gameObject.GetComponent<Button>().interactable = false;
+            
+        }
+        else
+        {
+            gameObject.GetComponent<Button>().interactable = true;
+        }
     }
 
     // Update is called once per frame
