@@ -1,0 +1,14 @@
+{
+"companyName": "We are not Spies",
+"productName": "LudumDare 41",
+"dataUrl": "webglbuild.data.unityweb",
+"asmCodeUrl": "webglbuild.asm.code.unityweb",
+"asmMemoryUrl": "webglbuild.asm.memory.unityweb",
+"asmFrameworkUrl": "webglbuild.asm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"backgroundUrl": "webglbuild.jpg",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#FFFFFF"
+}
