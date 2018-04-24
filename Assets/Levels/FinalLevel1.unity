@@ -1297,6 +1297,11 @@ Prefab:
       propertyPath: UI
       value: 
       objectReference: {fileID: 1070291890}
+    - target: {fileID: 82534486969646298, guid: 86b9a79d3f3dc4c4ab8c3e608f4dbd75,
+        type: 2}
+      propertyPath: m_Volume
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 86b9a79d3f3dc4c4ab8c3e608f4dbd75, type: 2}
   m_IsPrefabParent: 0
