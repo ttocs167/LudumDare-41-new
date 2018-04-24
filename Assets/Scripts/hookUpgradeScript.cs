@@ -46,11 +46,11 @@ public class hookUpgradeScript : MonoBehaviour
             manager.transform.gameObject.GetComponent<BuildingManagerScript>().currentMoney -= price;
             if (upgrade == "Size")
             {
-                hook.transform.localScale += new Vector3(0.5f, 0.5f, 0f);
+                hook.transform.localScale += new Vector3(1f, 1f, 0f);
             }
             else if (upgrade == "Speed")
             {
-                player.transform.gameObject.GetComponent<playerBehaviour>().HookSpeed += 1;
+                player.transform.gameObject.GetComponent<playerBehaviour>().HookSpeed += 1.5f;
                 
             }
         }
