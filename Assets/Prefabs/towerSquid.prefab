@@ -39,7 +39,6 @@ GameObject:
   - component: {fileID: 212424727236153616}
   - component: {fileID: 114937194853335258}
   - component: {fileID: 114906460321396360}
-  - component: {fileID: 58853704323487580}
   m_Layer: 0
   m_Name: towerSquid
   m_TagString: SquidTower
@@ -74,21 +73,6 @@ Transform:
   m_Father: {fileID: 4324716716136158}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270}
---- !u!58 &58853704323487580
-CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1755575025387608}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -11.727518, y: -1.638408}
-  serializedVersion: 2
-  m_Radius: 15.489108
 --- !u!95 &95410322733135808
 Animator:
   serializedVersion: 3

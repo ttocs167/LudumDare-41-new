@@ -68,6 +68,10 @@ public class phaseManager : MonoBehaviour
     }
     void Update()
     {
+        if (Time.timeScale != 0 && UI.activeSelf == false)
+        {
+            UI.SetActive(true);
+        }
         if (currentState == "BUILD" && Input.GetButtonDown("Jump")&&(!first))
         {
             if (setDayNight != null)
