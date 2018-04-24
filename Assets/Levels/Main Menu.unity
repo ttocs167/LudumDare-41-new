@@ -143,7 +143,7 @@ RectTransform:
   m_Father: {fileID: 1918679421}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.61487234}
+  m_AnchorMin: {x: 0, y: 0.7877493}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -707,7 +707,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 70763569}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.3851277
+  m_Size: 0.21225066
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2922,8 +2922,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 26, y: -38.9}
-  m_SizeDelta: {x: -44.4, y: 1608.6}
+  m_AnchoredPosition: {x: 35.6, y: 0.000022888184}
+  m_SizeDelta: {x: -54, y: 1825.2}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1966454305
 MonoBehaviour:
@@ -2957,16 +2957,16 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1.55
-  m_Text: "\nDavid \"dory451/ Buckets\" Mason:\nSuper Artman. Animation.\n\n\nRobert
-    \"Halibert/Not the Enigma Halibert\" Mason: \nFX. Shader Guy.\n\n\nRob \"Anchovy\"
-    Smith: \nArtman. Papa \"Anchovy\" See of triangulocorp- \"Every story has three
-    sides\".\n\n\nRob \"Carpster/ One True Fish/ Van Clam Master Race\" Stacey:\nMade
-    a Fishing game- \"Yeah and some f*#@s added a tower defence game to it\". Was
-    actually his idea.\n\n\nScott \"tenchsicle\" Herod: \nAI guy. Menus. Ideas man.
-    Particle effects. Everyone thought it was his idea.\n\n\nStu \"Sword Fishdar/Decker\"
-    Ple: \nButtons and Placement. Tidbits of UI stuff. Ass-orted code snippets. \n\n\nWoj
-    \"Lil' Freep/ State Machinist\" Rak: \nMusic Man. State machinist.\n\n\nBob Chappell:
-    \nWas not here."
+  m_Text: "We are not spies! \n(\"Spies we are not!\"):\n\nDavid \"dory451/ Buckets\"
+    Mason:\nSuper Artman. Animation.\n\n\nRobert \"Halibert/Not the Enigma Halibert\"
+    Mason: \nFX. Shader Guy.\n\n\nRob \"Anchovy\" Smith: \nArtman. Papa \"Anchovy\"
+    See of triangulocorp- \"Every story has three sides\".\n\n\nRob \"Carpster/ One
+    True Fish/ Van Clam Master Race\" Stacey:\nMade a Fishing game- \"Yeah and some
+    f*#@s added a tower defence game to it\". Was actually his idea.\n\n\nScott \"tenchsicle\"
+    Herod: \nAI guy. Menus. Ideas man. Particle effects. Everyone thought it was his
+    idea.\n\n\nStu \"Sword Fishdar/Decker\" Ple: \nButtons and Placement. Tidbits
+    of UI stuff. Ass-orted code snippets. \n\n\nWoj \"Lil' Freep/ State Machinist\"
+    Rak: \nMusic Man. State machinist.\n\n\nBob Chappell: \nWas not here."
 --- !u!222 &1966454306
 CanvasRenderer:
   m_ObjectHideFlags: 0
